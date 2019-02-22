@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_args.c                                     :+:      :+:    :+:   */
+/*   parse_string.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbashiri <bbashiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 15:15:05 by bbashiri          #+#    #+#             */
-/*   Updated: 2019/02/16 16:18:11 by bbashiri         ###   ########.fr       */
+/*   Updated: 2019/02/22 15:10:38 by bbashiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char    *parse_str(char *arg, t_print *node)
         ptr_arg = arg;
     len = ft_strlen(ptr_arg);
     node->width = node->width > 0 ? node->width : 0;
-    width = len > node->width ? len : node->width;
+    width = len > (size_t)node->width ? len : (size_t)node->width;
     str = ft_strnew(width);
     ft_memset(str, ' ', width);
     str = ft_strcpy_from(str, ptr_arg, node->flag == '-' ? 0 : width-len);

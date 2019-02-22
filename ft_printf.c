@@ -6,7 +6,7 @@
 /*   By: bbashiri <bbashiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 15:15:05 by bbashiri          #+#    #+#             */
-/*   Updated: 2019/02/16 16:18:11 by bbashiri         ###   ########.fr       */
+/*   Updated: 2019/02/22 17:27:30 by bbashiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int     ft_printf(const char * restrict format, ...)
     char    *output;
     t_print *node;
 
-    int     count = 0;
+    // int     count = 0;
 
     index = 0;
     output = ft_strnew(0);
@@ -89,7 +89,7 @@ int     ft_printf(const char * restrict format, ...)
         arg = parse_args(ap, node);
 
         printf("|%s|", arg);
-
+		ft_strdel(&arg);
 //        printf("flag: %c\n", node->flag);
 //        printf("width: %d\n", node->width);
 //        printf("prec: %d\n", node->precision);

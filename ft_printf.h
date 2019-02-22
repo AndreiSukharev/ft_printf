@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_h.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbashiri <bbashiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 15:14:50 by bbashiri          #+#    #+#             */
-/*   Updated: 2019/02/15 18:04:24 by bbashiri         ###   ########.fr       */
+/*   Updated: 2019/02/22 17:22:23 by bbashiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,6 @@ char            *parse_str(char *arg, t_print *node);
 char            *parse_char(char arg, t_print *node);
 
 char            *parse_address(long address, t_print *node);
-
+char			*ft_base_hex(long n, char type);
 
 #endif
