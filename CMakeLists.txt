@@ -1,0 +1,5 @@
+cmake_minimum_required (VERSION 2.6)
+project (make-build-debug/ft_printf)
+set(SOURCE_FILES ft_printf.h main.c ft_printf.c check_format.c parse_format.c parse_string.c parse_addres.c)
+add_executable(make-build-debug/ft_printf ${SOURCE_FILES})
+target_link_libraries(make-build-debug/ft_printf /Users/andrei/hack/school42/ft_printf/libft.a)

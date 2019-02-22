@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_h.h                                      :+:      :+:    :+:   */
+/*   parse_addres.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbashiri <bbashiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 15:14:50 by bbashiri          #+#    #+#             */
-/*   Updated: 2019/02/15 18:04:24 by bbashiri         ###   ########.fr       */
+/*   Created: 2019/02/16 15:15:05 by bbashiri          #+#    #+#             */
+/*   Updated: 2019/02/16 16:18:11 by bbashiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include "libft/libft.h"
-# include <stdarg.h>
+char *parse_address(long address, t_print *node)
+{
+    char *str;
 
-#endif
+    printf("%lu\n", address);
+//    check: add long address in str
+//    convert addreess in hex
+    return (str);
+}

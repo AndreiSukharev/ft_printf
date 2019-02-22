@@ -10,19 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_h.h"
+#include "ft_printf.h"
 
-int		main(int ac, char **av)
+
+int		main(void)
 {
-	// char str[5] = "asd";
-	int	i;
 
-	i = 0;
-	printf("%d\n", ac);
-	while (av[i])
-	{
-		printf("%s\n", av[++i]);
-	}
+	char *ptr;
+	char str[10] = "123";
+//	long addr;
+//
+    ptr = &str[0];
+//    addr = (long)str;
+//    printf("%p\n", &str);
+//
+//    printf("|%p|\n", ptr);
+//    printf("|%lu|\n", addr);
 
-	return(0);
+
+
+//    printf("|%*.*s|\n", 6, 3, str);
+//	ft_printf("first%-*.*s %%%c=sad", 6, 3, "string", "third");
+  ft_printf("address:%p", ptr);
+
+//	printf("|%-5s| |%-5s|", "1", "23");
+	return (1);
+
 }
