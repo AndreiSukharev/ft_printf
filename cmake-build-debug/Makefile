@@ -150,6 +150,114 @@ check_format.c.s:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/check_format.c.s
 .PHONY : check_format.c.s
 
+count.o: count.c.o
+
+.PHONY : count.o
+
+# target to build an object file
+count.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/count.c.o
+.PHONY : count.c.o
+
+count.i: count.c.i
+
+.PHONY : count.i
+
+# target to preprocess a source file
+count.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/count.c.i
+.PHONY : count.c.i
+
+count.s: count.c.s
+
+.PHONY : count.s
+
+# target to generate assembly for a file
+count.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/count.c.s
+.PHONY : count.c.s
+
+count_unsigned.o: count_unsigned.c.o
+
+.PHONY : count_unsigned.o
+
+# target to build an object file
+count_unsigned.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.o
+.PHONY : count_unsigned.c.o
+
+count_unsigned.i: count_unsigned.c.i
+
+.PHONY : count_unsigned.i
+
+# target to preprocess a source file
+count_unsigned.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.i
+.PHONY : count_unsigned.c.i
+
+count_unsigned.s: count_unsigned.c.s
+
+.PHONY : count_unsigned.s
+
+# target to generate assembly for a file
+count_unsigned.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.s
+.PHONY : count_unsigned.c.s
+
+flags.o: flags.c.o
+
+.PHONY : flags.o
+
+# target to build an object file
+flags.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/flags.c.o
+.PHONY : flags.c.o
+
+flags.i: flags.c.i
+
+.PHONY : flags.i
+
+# target to preprocess a source file
+flags.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/flags.c.i
+.PHONY : flags.c.i
+
+flags.s: flags.c.s
+
+.PHONY : flags.s
+
+# target to generate assembly for a file
+flags.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/flags.c.s
+.PHONY : flags.c.s
+
+for_lib.o: for_lib.c.o
+
+.PHONY : for_lib.o
+
+# target to build an object file
+for_lib.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.o
+.PHONY : for_lib.c.o
+
+for_lib.i: for_lib.c.i
+
+.PHONY : for_lib.i
+
+# target to preprocess a source file
+for_lib.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.i
+.PHONY : for_lib.c.i
+
+for_lib.s: for_lib.c.s
+
+.PHONY : for_lib.s
+
+# target to generate assembly for a file
+for_lib.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.s
+.PHONY : for_lib.c.s
+
 ft_printf.o: ft_printf.c.o
 
 .PHONY : ft_printf.o
@@ -204,32 +312,113 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/main.c.s
 .PHONY : main.c.s
 
-parse_addres.o: parse_addres.c.o
+manage_feg.o: manage_feg.c.o
 
-.PHONY : parse_addres.o
+.PHONY : manage_feg.o
 
 # target to build an object file
-parse_addres.c.o:
-	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.o
-.PHONY : parse_addres.c.o
+manage_feg.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o
+.PHONY : manage_feg.c.o
 
-parse_addres.i: parse_addres.c.i
+manage_feg.i: manage_feg.c.i
 
-.PHONY : parse_addres.i
+.PHONY : manage_feg.i
 
 # target to preprocess a source file
-parse_addres.c.i:
-	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.i
-.PHONY : parse_addres.c.i
+manage_feg.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.i
+.PHONY : manage_feg.c.i
 
-parse_addres.s: parse_addres.c.s
+manage_feg.s: manage_feg.c.s
 
-.PHONY : parse_addres.s
+.PHONY : manage_feg.s
 
 # target to generate assembly for a file
-parse_addres.c.s:
-	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.s
-.PHONY : parse_addres.c.s
+manage_feg.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.s
+.PHONY : manage_feg.c.s
+
+manage_size.o: manage_size.c.o
+
+.PHONY : manage_size.o
+
+# target to build an object file
+manage_size.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.o
+.PHONY : manage_size.c.o
+
+manage_size.i: manage_size.c.i
+
+.PHONY : manage_size.i
+
+# target to preprocess a source file
+manage_size.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.i
+.PHONY : manage_size.c.i
+
+manage_size.s: manage_size.c.s
+
+.PHONY : manage_size.s
+
+# target to generate assembly for a file
+manage_size.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.s
+.PHONY : manage_size.c.s
+
+manage_types.o: manage_types.c.o
+
+.PHONY : manage_types.o
+
+# target to build an object file
+manage_types.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.o
+.PHONY : manage_types.c.o
+
+manage_types.i: manage_types.c.i
+
+.PHONY : manage_types.i
+
+# target to preprocess a source file
+manage_types.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.i
+.PHONY : manage_types.c.i
+
+manage_types.s: manage_types.c.s
+
+.PHONY : manage_types.s
+
+# target to generate assembly for a file
+manage_types.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.s
+.PHONY : manage_types.c.s
+
+manage_unsigned_size.o: manage_unsigned_size.c.o
+
+.PHONY : manage_unsigned_size.o
+
+# target to build an object file
+manage_unsigned_size.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.o
+.PHONY : manage_unsigned_size.c.o
+
+manage_unsigned_size.i: manage_unsigned_size.c.i
+
+.PHONY : manage_unsigned_size.i
+
+# target to preprocess a source file
+manage_unsigned_size.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.i
+.PHONY : manage_unsigned_size.c.i
+
+manage_unsigned_size.s: manage_unsigned_size.c.s
+
+.PHONY : manage_unsigned_size.s
+
+# target to generate assembly for a file
+manage_unsigned_size.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.s
+.PHONY : manage_unsigned_size.c.s
 
 parse_format.o: parse_format.c.o
 
@@ -258,6 +447,60 @@ parse_format.c.s:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_format.c.s
 .PHONY : parse_format.c.s
 
+parse_hex.o: parse_hex.c.o
+
+.PHONY : parse_hex.o
+
+# target to build an object file
+parse_hex.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.o
+.PHONY : parse_hex.c.o
+
+parse_hex.i: parse_hex.c.i
+
+.PHONY : parse_hex.i
+
+# target to preprocess a source file
+parse_hex.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.i
+.PHONY : parse_hex.c.i
+
+parse_hex.s: parse_hex.c.s
+
+.PHONY : parse_hex.s
+
+# target to generate assembly for a file
+parse_hex.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.s
+.PHONY : parse_hex.c.s
+
+parse_main.o: parse_main.c.o
+
+.PHONY : parse_main.o
+
+# target to build an object file
+parse_main.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.o
+.PHONY : parse_main.c.o
+
+parse_main.i: parse_main.c.i
+
+.PHONY : parse_main.i
+
+# target to preprocess a source file
+parse_main.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.i
+.PHONY : parse_main.c.i
+
+parse_main.s: parse_main.c.s
+
+.PHONY : parse_main.s
+
+# target to generate assembly for a file
+parse_main.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.s
+.PHONY : parse_main.c.s
+
 parse_string.o: parse_string.c.o
 
 .PHONY : parse_string.o
@@ -285,6 +528,60 @@ parse_string.c.s:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.s
 .PHONY : parse_string.c.s
 
+smth_to_a.o: smth_to_a.c.o
+
+.PHONY : smth_to_a.o
+
+# target to build an object file
+smth_to_a.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.o
+.PHONY : smth_to_a.c.o
+
+smth_to_a.i: smth_to_a.c.i
+
+.PHONY : smth_to_a.i
+
+# target to preprocess a source file
+smth_to_a.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.i
+.PHONY : smth_to_a.c.i
+
+smth_to_a.s: smth_to_a.c.s
+
+.PHONY : smth_to_a.s
+
+# target to generate assembly for a file
+smth_to_a.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.s
+.PHONY : smth_to_a.c.s
+
+smth_un_to_a.o: smth_un_to_a.c.o
+
+.PHONY : smth_un_to_a.o
+
+# target to build an object file
+smth_un_to_a.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.o
+.PHONY : smth_un_to_a.c.o
+
+smth_un_to_a.i: smth_un_to_a.c.i
+
+.PHONY : smth_un_to_a.i
+
+# target to preprocess a source file
+smth_un_to_a.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.i
+.PHONY : smth_un_to_a.c.i
+
+smth_un_to_a.s: smth_un_to_a.c.s
+
+.PHONY : smth_un_to_a.s
+
+# target to generate assembly for a file
+smth_un_to_a.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.s
+.PHONY : smth_un_to_a.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -297,21 +594,54 @@ help:
 	@echo "... check_format.o"
 	@echo "... check_format.i"
 	@echo "... check_format.s"
+	@echo "... count.o"
+	@echo "... count.i"
+	@echo "... count.s"
+	@echo "... count_unsigned.o"
+	@echo "... count_unsigned.i"
+	@echo "... count_unsigned.s"
+	@echo "... flags.o"
+	@echo "... flags.i"
+	@echo "... flags.s"
+	@echo "... for_lib.o"
+	@echo "... for_lib.i"
+	@echo "... for_lib.s"
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... parse_addres.o"
-	@echo "... parse_addres.i"
-	@echo "... parse_addres.s"
+	@echo "... manage_feg.o"
+	@echo "... manage_feg.i"
+	@echo "... manage_feg.s"
+	@echo "... manage_size.o"
+	@echo "... manage_size.i"
+	@echo "... manage_size.s"
+	@echo "... manage_types.o"
+	@echo "... manage_types.i"
+	@echo "... manage_types.s"
+	@echo "... manage_unsigned_size.o"
+	@echo "... manage_unsigned_size.i"
+	@echo "... manage_unsigned_size.s"
 	@echo "... parse_format.o"
 	@echo "... parse_format.i"
 	@echo "... parse_format.s"
+	@echo "... parse_hex.o"
+	@echo "... parse_hex.i"
+	@echo "... parse_hex.s"
+	@echo "... parse_main.o"
+	@echo "... parse_main.i"
+	@echo "... parse_main.s"
 	@echo "... parse_string.o"
 	@echo "... parse_string.i"
 	@echo "... parse_string.s"
+	@echo "... smth_to_a.o"
+	@echo "... smth_to_a.i"
+	@echo "... smth_to_a.s"
+	@echo "... smth_un_to_a.o"
+	@echo "... smth_un_to_a.i"
+	@echo "... smth_un_to_a.s"
 .PHONY : help
 
 

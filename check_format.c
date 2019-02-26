@@ -12,21 +12,36 @@
 
 #include "ft_printf.h"
 
-char    check_flag(char format)
+size_t   check_flag(const char *format, t_print *node)
 {
-    if (format == '-')
-        return ('-');
-    else if (format == '+')
-        return ('+');
-    else if (format == ' ')
-        return (' ');
-    else if (format == '#')
-        return ('#');
-    else if (format == '0')
-        return ('0');
-    else
-        return ('1');
+    size_t i;
 
+    i = 0;
+    while (format[i] == '-' || format[i] == '+' || format[i] == ' ' || format[i] == '#' || format[i] == '0')
+    {
+        if (format[i] == '-')
+        {
+            node->flag[0] = '-';
+        }
+        else if (format[i] == '+')
+        {
+            node->flag[1] = '+';
+        }
+        else if (format[i] == ' ')
+        {
+            node->flag[2] = ' ';
+        }
+        else if (format[i] == '#')
+        {
+            node->flag[3] = '#';
+        }
+        else if (format[i] == '0')
+        {
+            node->flag[4] = '0';
+        }
+        i++;
+    }
+    return (i);
 }
 
 int    check_width(const char *format)
@@ -67,7 +82,7 @@ int    check_precision(const char *format)
     while (format[i] >= '0' && format[i] <= '9')
         i++;
     if (i == 1)
-        return (0);
+        return (-3);
     i--;
     str = ft_strnew(i);
     str = ft_strncat(str, &format[1], i);
@@ -76,31 +91,37 @@ int    check_precision(const char *format)
     return res;
 }
 
-char    *check_size(const char *format)
+size_t     check_size(const char *format, t_print *node)
 {
     size_t  i;
-    char    *res;
 
     i = 0;
     if (format[0] == 'h')
     {
+        node->size[0] = 'h';
+        i = 1;
         if (format[1] == 'h')
-            i = 2;
-        else
-            i = 1;
+        {
+            node->size[1] = 'h';
+            return (2);
+        }
     }
-    else if (format[0] == 'l')
+    if (format[0] == 'l')
     {
+        node->size[0] = 'l';
+        i = 1;
         if (format[1] == 'l')
-            i = 2;
-        else
-            i = 1;
+        {
+            node->size[1] = 'l';
+            return (2);
+        }
     }
     else if (format[0] == 'L')
-        i = 1;
-    res = ft_strnew(i);
-    res = ft_strncat(res, &format[0], i);
-    return (res);
+    {
+        node->size[0] = 'L';
+        return (1);
+    }
+    return (i);
 }
 
 char    check_type(char format)

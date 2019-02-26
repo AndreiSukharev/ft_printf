@@ -36,19 +36,21 @@ char    *parse_str(char *arg, t_print *node)
     size_t  len;
     size_t  width;
 
-    if (node->precision >= 0)
+    if (node->precision >= 0 && node->type == 's')
     {
         ptr_arg = ft_strnew(ft_strlen(arg) - (size_t)node->precision);
         ptr_arg = ft_strncpy(ptr_arg, arg, (size_t)node->precision);
     }
     else
         ptr_arg = arg;
+
     len = ft_strlen(ptr_arg);
     node->width = node->width > 0 ? node->width : 0;
     width = len > (size_t)node->width ? len : (size_t)node->width;
     str = ft_strnew(width);
     ft_memset(str, ' ', width);
-    str = ft_strcpy_from(str, ptr_arg, node->flag == '-' ? 0 : width-len);
+    ft_strcpy_from(str, ptr_arg, node->flag[0] == '-' ? 0 : width-len);
+//    ft_strdel(&arg);
     return (str);
 }
 
@@ -65,9 +67,28 @@ char    *parse_char(char arg, t_print *node)
         return (str);
     }
     ft_memset(str, ' ', width);
-    if (node->flag == '-')
+    if (node->flag[0] == '-')
         str[0] = arg;
     else
         str[width - 1] = arg;
     return (str);
+}
+
+char *parse_address(long address, t_print *node)
+{
+    int len;
+    int count_long;
+    char *str_base;
+    char *str_prec;
+    char *res;
+
+    str_base = ft_base_hex(address);
+    count_long = (int)ft_strlen(str_base);
+    len = node->precision > count_long ? node->precision - count_long : 0;
+    str_prec = ft_strnew((size_t)len + 2);
+    oux_precision(str_prec, node, len + 2);
+    res = ft_strjoin(str_prec, str_base);
+    ft_strdel(&str_prec);
+    ft_strdel(&str_base);
+    return (parse_str(res, node));
 }

@@ -122,18 +122,161 @@ CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/parse_string.c -o CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.s
 
-CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
-CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.o: ../parse_addres.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.o   -c /Users/andrei/hack/school42/ft_printf/parse_addres.c
+CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
+CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.o: ../parse_hex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.o   -c /Users/andrei/hack/school42/ft_printf/parse_hex.c
 
-CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/parse_addres.c > CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.i
+CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/parse_hex.c > CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.i
 
-CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/parse_addres.c -o CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.s
+CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/parse_hex.c -o CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.s
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
+CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.o: ../manage_types.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.o   -c /Users/andrei/hack/school42/ft_printf/manage_types.c
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/manage_types.c > CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.i
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/manage_types.c -o CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.s
+
+CMakeFiles/make-build-debug/ft_printf.dir/flags.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
+CMakeFiles/make-build-debug/ft_printf.dir/flags.c.o: ../flags.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/flags.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/flags.c.o   -c /Users/andrei/hack/school42/ft_printf/flags.c
+
+CMakeFiles/make-build-debug/ft_printf.dir/flags.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/flags.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/flags.c > CMakeFiles/make-build-debug/ft_printf.dir/flags.c.i
+
+CMakeFiles/make-build-debug/ft_printf.dir/flags.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/flags.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/flags.c -o CMakeFiles/make-build-debug/ft_printf.dir/flags.c.s
+
+CMakeFiles/make-build-debug/ft_printf.dir/count.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
+CMakeFiles/make-build-debug/ft_printf.dir/count.c.o: ../count.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/count.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/count.c.o   -c /Users/andrei/hack/school42/ft_printf/count.c
+
+CMakeFiles/make-build-debug/ft_printf.dir/count.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/count.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/count.c > CMakeFiles/make-build-debug/ft_printf.dir/count.c.i
+
+CMakeFiles/make-build-debug/ft_printf.dir/count.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/count.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/count.c -o CMakeFiles/make-build-debug/ft_printf.dir/count.c.s
+
+CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
+CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.o: ../count_unsigned.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.o   -c /Users/andrei/hack/school42/ft_printf/count_unsigned.c
+
+CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/count_unsigned.c > CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.i
+
+CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/count_unsigned.c -o CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.s
+
+CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
+CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.o: ../smth_to_a.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.o   -c /Users/andrei/hack/school42/ft_printf/smth_to_a.c
+
+CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/smth_to_a.c > CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.i
+
+CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/smth_to_a.c -o CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.s
+
+CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
+CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.o: ../smth_un_to_a.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.o   -c /Users/andrei/hack/school42/ft_printf/smth_un_to_a.c
+
+CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/smth_un_to_a.c > CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.i
+
+CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/smth_un_to_a.c -o CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.s
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
+CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.o: ../manage_unsigned_size.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.o   -c /Users/andrei/hack/school42/ft_printf/manage_unsigned_size.c
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/manage_unsigned_size.c > CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.i
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/manage_unsigned_size.c -o CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.s
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
+CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.o: ../manage_size.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.o   -c /Users/andrei/hack/school42/ft_printf/manage_size.c
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/manage_size.c > CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.i
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/manage_size.c -o CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.s
+
+CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
+CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.o: ../parse_main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.o   -c /Users/andrei/hack/school42/ft_printf/parse_main.c
+
+CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/parse_main.c > CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.i
+
+CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/parse_main.c -o CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.s
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
+CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o: ../manage_feg.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o   -c /Users/andrei/hack/school42/ft_printf/manage_feg.c
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/manage_feg.c > CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.i
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/manage_feg.c -o CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.s
+
+CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.o: CMakeFiles/make-build-debug/ft_printf.dir/flags.make
+CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.o: ../for_lib.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.o   -c /Users/andrei/hack/school42/ft_printf/for_lib.c
+
+CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/andrei/hack/school42/ft_printf/for_lib.c > CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.i
+
+CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/andrei/hack/school42/ft_printf/for_lib.c -o CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.s
 
 # Object files for target make-build-debug/ft_printf
 make__build__debug/ft_printf_OBJECTS = \
@@ -142,7 +285,18 @@ make__build__debug/ft_printf_OBJECTS = \
 "CMakeFiles/make-build-debug/ft_printf.dir/check_format.c.o" \
 "CMakeFiles/make-build-debug/ft_printf.dir/parse_format.c.o" \
 "CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.o" \
-"CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.o"
+"CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.o" \
+"CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.o" \
+"CMakeFiles/make-build-debug/ft_printf.dir/flags.c.o" \
+"CMakeFiles/make-build-debug/ft_printf.dir/count.c.o" \
+"CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.o" \
+"CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.o" \
+"CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.o" \
+"CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.o" \
+"CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.o" \
+"CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.o" \
+"CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o" \
+"CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.o"
 
 # External object files for target make-build-debug/ft_printf
 make__build__debug/ft_printf_EXTERNAL_OBJECTS =
@@ -152,11 +306,22 @@ make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/ft_printf.
 make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/check_format.c.o
 make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/parse_format.c.o
 make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.o
-make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/parse_addres.c.o
+make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.o
+make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.o
+make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/flags.c.o
+make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/count.c.o
+make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.o
+make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.o
+make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.o
+make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.o
+make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.o
+make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.o
+make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o
+make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.o
 make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/build.make
 make-build-debug/ft_printf: ../libft.a
 make-build-debug/ft_printf: CMakeFiles/make-build-debug/ft_printf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable make-build-debug/ft_printf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking C executable make-build-debug/ft_printf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/make-build-debug/ft_printf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

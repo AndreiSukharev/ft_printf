@@ -83,6 +83,18 @@
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/check_format.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/count.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/count_unsigned.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/flags.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/for_lib.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/ft_printf.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
@@ -92,13 +104,34 @@
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/main.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/andrei/hack/school42/ft_printf/parse_addres.c">
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/manage_feg.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/manage_size.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/manage_types.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/manage_unsigned_size.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/parse_format.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/parse_hex.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/parse_main.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/parse_string.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/smth_to_a.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/smth_un_to_a.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/CMakeLists.txt">

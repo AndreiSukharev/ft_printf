@@ -5,10 +5,10 @@ LIBFT_SRCS = libft/*.c
 OBJS = *.o
 
 $(NAME):
-	# gcc $(FLAGS) -c $(LIBFT_SRCS)
-	# ar rc libft.a $(OBJS)
-	# ranlib libft.a
-	gcc $(FLAGS) $(PRINTF_SRCS) -L. -lft -o $(NAME)
+	gcc $(FLAGS) -c $(LIBFT_SRCS)
+	#ar rc libft.a $(OBJS)
+	#ranlib libft.a
+	#gcc $(FLAGS) $(PRINTF_SRCS) -L. -lft -o $(NAME)
 
 all: $(NAME)
 
@@ -17,6 +17,6 @@ clean:
 
 fclean: clean
 	/bin/rm -f $(NAME)
-	# libft.a
+	#libft.a
 
 re: fclean all

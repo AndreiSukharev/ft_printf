@@ -24,15 +24,13 @@ char		*ft_itoa(int n)
 		return (0);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	str[len--] = '\0';
 	sign = n < 0 ? 1 : 0;
 	if (n < 0)
 		n *= -1;
 	while (len >= 0)
 	{
-		str[len] = (n % 10) + '0';
+		str[--len] = (n % 10) + '0';
 		n /= 10;
-		len--;
 	}
 	if (sign == 1)
 		str[0] = '-';

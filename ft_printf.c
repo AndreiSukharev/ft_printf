@@ -12,105 +12,54 @@
 
 #include "ft_printf.h"
 
-
-size_t    parse_format(const char *format, t_print *node)
+char *parse_what(va_list ap, t_print *node)
 {
-    size_t     index_percent;
+    char *arg;
 
-    index_percent = find_percent(format);
-    node->flag = check_flag(format[++index_percent]);
-
-    node->width = check_width(&format[index_percent += node->flag == '1' ? 0 : 1]);
-    index_percent += node->width < 0 ? 1: ft_countint(node->width);
-    index_percent += node->width == -1 ? -1 : 0;
-
-    node->precision = check_precision(&format[index_percent]);
-    index_percent += node->precision < 0 ? 2 : ft_countint(node->precision) + 1;
-    index_percent += node->precision == -1 ? -2 : 0;
-
-    node->size = check_size(&format[index_percent]);
-
-    index_percent += ft_strlen(node->size);
-    node->type = check_type(format[index_percent]);
-
-    printf("flag: %c\n", node->flag);
-    printf("width: %d\n", node->width);
-    printf("prec: %d\n", node->precision);
-    printf("size: %s\n", node->size);
-    printf("type: %c\n", node->type);
-    return (++index_percent);
-}
-
-char *parse_args(va_list ap, t_print *node)
-{
-    char *tmp;
-
-    if (node->width == -2)
-        node->width = va_arg(ap, int);
-    if (node->precision == -2)
-        node->precision = va_arg(ap, int);
-
-    if (node->type == 'c')
-    {
-
-        tmp = parse_char((char)va_arg(ap, int), node);
-    }
-    else if (node->type == 's')
-    {
-        tmp = parse_str(va_arg(ap, char *), node);
-    }
-    else if (node->type == 'p')
-    {
-        tmp = parse_address(va_arg(ap, long), node);
-    }
+    if (node->type == 's' || node->type == 'p' || node->type == 'c')
+        arg = parse_csp(ap, node);
+    else if (node->type == 'f' || node->type == 'e' || node->type == 'g')
+        arg = parse_feg(ap, node);
+    else if (node->size[0] == '0' && node->size[1] == '0' && (node->type == 'X' || node->type == 'x' ||
+    node->type == 'o' || node->type == 'u' || node->type == 'd' || node->type == 'i'))
+        arg = parse_dioux(ap, node);
     else
-        tmp = NULL;
-    return (tmp);
+        arg = parse_dioux_size(ap, node);
+    return (arg);
 }
+
+char    *main_result(const char *format, va_list ap, char *res)
+{
+    t_print *node;
+    char    *arg;
+    size_t  index;
+
+    index = 0;
+    while (format[index])
+    {
+        res = get_str_before_percent(&format[index], res);
+        if (format[index + find_percent(&format[index])] == '\0')
+            return (res);
+        node = init_tprint();
+        index += parse_format(&format[index], node);
+        arg = parse_what(ap, node);
+        res = ft_strjoin(res, arg);
+        ft_strdel(&arg);
+        del_tprint(&node);
+    }
+    return (res);
+}
+
 
 int     ft_printf(const char * restrict format, ...)
 {
     va_list ap;
-    char    *arg;
-    size_t  index;
     char    *output;
-    t_print *node;
 
-    // int     count = 0;
-
-    index = 0;
     output = ft_strnew(0);
     va_start(ap, format);
-    printf("%s\n", format);
-//  while (count++ < 3) {
-        output = get_str_before_percent(&format[index], output);
-        node = init_tprint();
-        index += parse_format(&format[index], node);
-        arg = parse_args(ap, node);
-
-        printf("|%s|", arg);
-		ft_strdel(&arg);
-//        printf("flag: %c\n", node->flag);
-//        printf("width: %d\n", node->width);
-//        printf("prec: %d\n", node->precision);
-//        printf("size: %s\n", node->size);
-//        printf("type: %c\n\n", node->type);
-        del_tprint(&node);
-//    }
-//    printf("|%s|\n", output);
-////
-
-
-//    while (count++ < 2)
-//    {
-//      get output before %
-//      parse until %s: parse_format(node, format); return index;
-//      get va_arg due to % node->type
-//        arg = va_arg(ap, char *);
-//      parse_arg(arg, node); return str;
-//      output = ft_cat(output, str)
-//        printf("%s\n", arg);
-//    }
-//    va_end(ap);
-    return(-1);
+    output = main_result(format, ap, output);
+    ft_putstr(output);
+    va_end(ap);
+    return(1);
 }

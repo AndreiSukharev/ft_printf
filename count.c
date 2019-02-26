@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_addres.c                                     :+:      :+:    :+:   */
+/*   lib1.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbashiri <bbashiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,52 +12,63 @@
 
 #include "ft_printf.h"
 
-char	*ft_base_hex(long n, char type)
+size_t	 ft_count_short(short n)
 {
-	int			i;
-	int			j;
-	char		*str;
-	int			hex[64];
-	char 		dict_hex[16];
+    size_t	count;
 
-	if (type == 'X')
-		ft_strcpy(dict_hex, "0123456789ABCDEF");
-	else
-		ft_strcpy(dict_hex, "0123456789abcdef");
-	i = 0;
-	j = 2;
-	while (n)
-	{
-		hex[i++] = n % 16;
-		n /= 16;
-	}
-	str = ft_strnew(i + 2);
-	str[0] = '0';
-	str[1] = 'x';
-	while (--i >= 0)
-		str[j++] = dict_hex[hex[i]];
-	return (str);
+    if (n < 1)
+        return (0);
+    count = 0;
+    while (n)
+    {
+        n /= 10;
+        count++;
+    }
+    return (count);
 }
 
-// static size_t	ft_countlong(long n)
-// {
-// 	size_t	count;
-//
-// 	if (n < 1)
-// 		return (0);
-// 	count = 0;
-// 	while (n)
-// 	{
-// 		n /= 10;
-// 		count++;
-// 	}
-// 	return (count);
-// }
-
-char *parse_address(long address, t_print *node)
+size_t	 ft_count_signed_char(signed char n)
 {
-    char *str;
+    size_t	count;
 
-    str = ft_base_hex(address, node->type);
-    return (str);
+    if (n < 1)
+        return (0);
+    count = 0;
+    while (n)
+    {
+        n /= 10;
+        count++;
+    }
+    return (count);
+}
+
+
+size_t	ft_count_long(long n)
+{
+    size_t	count;
+
+    if (n < 1)
+        return (0);
+    count = 0;
+    while (n)
+    {
+        n /= 10;
+        count++;
+    }
+    return (count);
+}
+
+size_t	ft_count_longlong(long long n)
+{
+    size_t	count;
+
+    if (n < 1)
+        return (0);
+    count = 0;
+    while (n)
+    {
+        n /= 10;
+        count++;
+    }
+    return (count);
 }

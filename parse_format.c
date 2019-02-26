@@ -73,12 +73,14 @@ t_print *init_tprint()
 
     if (!(node = (t_print *)malloc(sizeof(t_print))))
         return(NULL);
-    node->flag = '1'; // if at the end of function '1', this flag does not exist
+    //flag if at the end of function '1', this flag does not exist
     node->width = -1; // -2 is *
-    node->precision = -1; //0 - tochka, -2 is *
-    node->size = ft_strnew(0);
+    node->precision = -1; //-3 - tochka, -2 is *
+    node->size[0] = '0';
+    node->size[1] = '0';
+    node->size[2] = '\0';
     node->type = '0'; // if at the end of function '0' it is this flag does not exist
-
+    node->len = 0;
     return node;
 }
 

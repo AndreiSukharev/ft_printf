@@ -15,12 +15,27 @@
 int		main(void)
 {
 
+//    float f;
+//
+//    f = 233.2379;
+//    printf("%.6Lf\n", f);
+//    ft_printf("%.6Lf", f);
 	char *ptr;
 	char str[10] = "123";
 
 	ptr = &str[0];
-	printf("%p\n", ptr);
-	ft_printf("%p", ptr);
+	printf("|%+20.10llx| |yegogo%s| |%0hho|\n", -324, "ADD", ptr);
+	ft_printf("|%+20.10llx| |yegogo%s| |%0hho|", -324, "ADD", ptr);
+//    printf("|yegogo%s|\n", "ADD");
+//    ft_printf("|yegogo%s|", "ADD");
+//	printf("|%10.9d|\n", 123456);
+//	ft_printf("%10.9d", 123456);
+
+
+//  think about width, precision in diouxX
+//	if it is necessary отделить width, precision from str,char, p
+
+
 	// printf("%s\n",ft_base_hex((long)ptr, 'p'));
 //    printf("|%*.*s|\n", 6, 3, str);
 	// ft_printf("first%-*.*s %%%c=sad", 6, 3, "string", "third");
