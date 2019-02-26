@@ -582,6 +582,33 @@ smth_un_to_a.c.s:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.s
 .PHONY : smth_un_to_a.c.s
 
+temp.o: temp.c.o
+
+.PHONY : temp.o
+
+# target to build an object file
+temp.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/temp.c.o
+.PHONY : temp.c.o
+
+temp.i: temp.c.i
+
+.PHONY : temp.i
+
+# target to preprocess a source file
+temp.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/temp.c.i
+.PHONY : temp.c.i
+
+temp.s: temp.c.s
+
+.PHONY : temp.s
+
+# target to generate assembly for a file
+temp.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/temp.c.s
+.PHONY : temp.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -642,6 +669,9 @@ help:
 	@echo "... smth_un_to_a.o"
 	@echo "... smth_un_to_a.i"
 	@echo "... smth_un_to_a.s"
+	@echo "... temp.o"
+	@echo "... temp.i"
+	@echo "... temp.s"
 .PHONY : help
 
 

@@ -48,6 +48,7 @@ size_t     find_percent(const char *str)
     return (i);
 
 }
+
 char    *get_str_before_percent(const char *format, char *old_output)
 {
     char    *new_str;

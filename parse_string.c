@@ -43,12 +43,14 @@ char    *parse_str(char *arg, t_print *node)
     }
     else
         ptr_arg = arg;
-
     len = ft_strlen(ptr_arg);
     node->width = node->width > 0 ? node->width : 0;
     width = len > (size_t)node->width ? len : (size_t)node->width;
     str = ft_strnew(width);
-    ft_memset(str, ' ', width);
+    if (node->flag[4] == '0' && node->precision == -1 && check_flag_0(node))
+        ft_memset(str, '0', width);
+    else
+        ft_memset(str, ' ', width);
     ft_strcpy_from(str, ptr_arg, node->flag[0] == '-' ? 0 : width-len);
 //    ft_strdel(&arg);
     return (str);

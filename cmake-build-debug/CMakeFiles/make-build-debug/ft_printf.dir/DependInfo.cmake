@@ -21,6 +21,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/andrei/hack/school42/ft_printf/parse_string.c" "/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.o"
   "/Users/andrei/hack/school42/ft_printf/smth_to_a.c" "/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.o"
   "/Users/andrei/hack/school42/ft_printf/smth_un_to_a.c" "/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.o"
+  "/Users/andrei/hack/school42/ft_printf/temp.c" "/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles/make-build-debug/ft_printf.dir/temp.c.o"
   )
 set(CMAKE_C_COMPILER_ID "Clang")
 

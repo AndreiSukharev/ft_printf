@@ -100,4 +100,9 @@ char            *manage_float(long double f, t_print *node);
 long long       ft_pow(long long a, int b);
 long long       intToStr_float(long long x, char str[], int d);
 
+char            *check_another_percent(const char *format, size_t index, t_print *node);
+int             check_flag_0(t_print *node);
+char            *parse_str_oux(char *ptr_arg, t_print *node);
+void            find_and_del_x(char *str);;
+
 #endif

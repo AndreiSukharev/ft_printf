@@ -15,17 +15,28 @@
 int		main(void)
 {
 
+//	ft_printf("% ");
+//	ft_printf("% h");
+	ft_printf("%Z");
+
+
+//	printf("%#-08x\n", 42);
+//	ft_printf("%#-08x\n\n", 42);
+//	printf("%#8x\n", 42);
+//	ft_printf("%#8x\n\n", 42);
+//	printf("%#08x\n", 42);
+//	ft_printf("%#08x\n", 42);
 //    float f;
 //
 //    f = 233.2379;
 //    printf("%.6Lf\n", f);
 //    ft_printf("%.6Lf", f);
-	char *ptr;
-	char str[10] = "123";
-
-	ptr = &str[0];
-	printf("|%+20.10llx| |yegogo%s| |%0hho|\n", -324, "ADD", ptr);
-	ft_printf("|%+20.10llx| |yegogo%s| |%0hho|", -324, "ADD", ptr);
+//	char *ptr;
+//	char str[10] = "123";
+//
+//	ptr = &str[0];
+//	printf("|%+20.10llx| |yegogo%s| |%0hho|\n", -324, "ADD", ptr);
+//	ft_printf("|%+20.10llx| |yegogo%s| |%0hho|", -324, "ADD", ptr);
 //    printf("|yegogo%s|\n", "ADD");
 //    ft_printf("|yegogo%s|", "ADD");
 //	printf("|%10.9d|\n", 123456);

@@ -54,6 +54,7 @@ char	*ft_base_xo(unsigned int n, t_print *node, int base)
         n /= base;
     }
     str = ft_strnew(i);
+    ft_memset(str, '0', 1);
     while (--i >= 0)
         str[j++] = dict_hex[hex[i]];
     return (str);
@@ -79,6 +80,7 @@ char	*ft_base_xo_long(unsigned long n, t_print *node, int base)
         n /= base;
     }
     str = ft_strnew(i);
+    ft_memset(str, '0', 1);
     while (--i >= 0)
         str[j++] = dict_hex[hex[i]];
     return (str);
@@ -104,6 +106,7 @@ char	*ft_base_xo_longlong(unsigned long long n, t_print *node, int base)
         n /= base;
     }
     str = ft_strnew(i);
+    ft_memset(str, '0', 1);
     while (--i >= 0)
         str[j++] = dict_hex[hex[i]];
     return (str);
