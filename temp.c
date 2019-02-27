@@ -12,8 +12,11 @@
 
 #include "ft_printf.h"
 
+
 char *check_another_percent(const char *format, size_t index, t_print *node)
 {
+    char *str;
+
     if (format[index] == '%' && !format[index + 1])
         return ("");
     index++;
@@ -23,7 +26,9 @@ char *check_another_percent(const char *format, size_t index, t_print *node)
     }
     if (format[index] == '%')
     {
-        return (parse_str("%", node));
+        str = parse_str("%", node);
+        node->common_len += ft_strlen(str);
+        return (str);
     }
     return (parse_str("", node));
 }

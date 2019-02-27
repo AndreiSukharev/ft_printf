@@ -28,52 +28,51 @@ char *parse_what(va_list ap, t_print *node)
     return (arg);
 }
 
-char    *main_result(const char *format, va_list ap, char *res)
+void main_result(const char *format, va_list ap, t_print *node)
 {
-    t_print *node;
     char    *arg;
     size_t  index;
     size_t  tmp;
 
     index = 0;
-
     while (format[index])
     {
-        res = get_str_before_percent(&format[index], res);
+        node->res = get_str_before_percent(&format[index], node->res, node);
+//        node->common_len += ft_strlen(node->res);
         tmp = find_percent(&format[index]);
         if (format[index + tmp] == '\0')
-            return (res);
-        node = init_tprint();
+            return;
         index += parse_format(&format[index], node);
         if (node->type == '0')
         {
-            return (ft_strjoin(res, check_another_percent(format, tmp, node)));
+            node->res = ft_strjoin(node->res, check_another_percent(format, tmp, node));
+            return;
         }
-            arg = parse_what(ap, node);
-            res = ft_strjoin(res, arg);
-            ft_strdel(&arg);
-        del_tprint(&node);
+        arg = parse_what(ap, node);
+        node->common_len += ft_strlen(arg);
+        node->res = ft_strjoin(node->res, arg);
+        ft_strdel(&arg);
+        rewrite_tprint(node);
     }
-    return (res);
 }
 
 
 int     ft_printf(const char * restrict format, ...)
 {
     va_list ap;
-    char    *output;
+    t_print *node;
     size_t len;
 
-    output = ft_strnew(0);
     va_start(ap, format);
-    output = main_result(format, ap, output);
+    node = init_tprint();
+    main_result(format, ap, node);
     va_end(ap);
-    len = ft_strlen(output);
-    if (output)
+    len = node->common_len;
+    if (node->res)
     {
         if (len)
-            write(1, output, len);
-        free(output);
+            write(1, node->res, len);
+        del_tprint(&node);
         return ((int)len);
     }
     return (-1);

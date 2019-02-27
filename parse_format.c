@@ -49,17 +49,34 @@ size_t     find_percent(const char *str)
 
 }
 
-char    *get_str_before_percent(const char *format, char *old_output)
+char    *get_str_before_percent(const char *format, char *old_output, t_print *node)
 {
     char    *new_str;
     size_t  size_format;
 
     size_format = find_percent(format);
+    node->common_len += size_format;
     new_str = ft_strnew(size_format + ft_strlen(old_output));
     new_str = ft_strcpy(new_str, old_output);
     new_str = ft_strncat_percent(new_str, format, size_format);
     ft_strdel(&old_output);
     return (new_str);
+}
+
+void rewrite_tprint(t_print *node)
+{
+    //flag if at the end of function '1', this flag does not exist
+    node->flag[0] = '1';
+    node->flag[1] = '1';
+    node->flag[2] = '1';
+    node->flag[3] = '1';
+    node->width = -1; // -2 is *
+    node->precision = -1; //-3 - tochka, -2 is *
+    node->size[0] = '0';
+    node->size[1] = '0';
+    node->size[2] = '\0';
+    node->type = '0'; // if at the end of function '0' it is this flag does not exist
+    node->len = 0;
 }
 
 void    del_tprint(t_print **node)
@@ -75,6 +92,10 @@ t_print *init_tprint()
     if (!(node = (t_print *)malloc(sizeof(t_print))))
         return(NULL);
     //flag if at the end of function '1', this flag does not exist
+    node->flag[0] = '1';
+    node->flag[1] = '1';
+    node->flag[2] = '1';
+    node->flag[3] = '1';
     node->width = -1; // -2 is *
     node->precision = -1; //-3 - tochka, -2 is *
     node->size[0] = '0';
@@ -82,6 +103,8 @@ t_print *init_tprint()
     node->size[2] = '\0';
     node->type = '0'; // if at the end of function '0' it is this flag does not exist
     node->len = 0;
+    node->common_len = 0;
+    node->res = ft_strnew(0);
     return node;
 }
 

@@ -24,6 +24,8 @@ typedef struct  s_print
     char        size[3];
     char        type;
     int         len;
+    size_t      common_len;
+    char        *res;
 }               t_print;
 
 int             ft_printf(const char * restrict format, ...);
@@ -34,9 +36,10 @@ char            *parse_feg(va_list ap, t_print *node);
 
 char	        *ft_strncat_percent(char *restrict s1, const char *restrict s2, size_t n);
 size_t          find_percent(const char *str);
-char            *get_str_before_percent(const char *format, char *old_output);
+char            *get_str_before_percent(const char *format, char *old_output, t_print *node);
 void            del_tprint(t_print **node);
 t_print         *init_tprint(void);
+void            rewrite_tprint(t_print *node);
 size_t          parse_format(const char *format, t_print *node);
 
 size_t          check_flag(const char *format, t_print *node);
@@ -103,6 +106,7 @@ long long       intToStr_float(long long x, char str[], int d);
 char            *check_another_percent(const char *format, size_t index, t_print *node);
 int             check_flag_0(t_print *node);
 char            *parse_str_oux(char *ptr_arg, t_print *node);
-void            find_and_del_x(char *str);;
+void            find_and_del_x(char *str);
+
 
 #endif

@@ -12,13 +12,34 @@
 
 #include "ft_printf.h"
 
+
+
 int		main(void)
 {
+    char *str[1];
 
-//	ft_printf("% ");
-//	ft_printf("% h");
-	ft_printf("%Z");
+    str[0] = 0;
+//    printf("%.2c\n", NULL);
+//    ft_printf("%.2c", NULL);
 
+//    printf("%c\n", 42);
+//    ft_printf("%c", 42);
+    printf("%5c\n", 42);
+    ft_printf("%5c", 42);
+
+
+//    printf("@moulitest: %#.o %#.0o\n", 0, 0);
+//    printf("@moulitest: %.x %.0x\n", 0, 0);
+//    printf("@moulitest: %5.x %5.0x\n", 0, 0);
+//    printf("@moulitest: %.o %.0o\n", 0, 0);
+//    printf("@moulitest: %5.o %5.0o\n\n", 0, 0);
+//
+//    ft_printf("@moulitest: %#.o %#.0o\n", 0, 0);
+//    ft_printf("@moulitest: %.x %.0x\n", 0, 0);
+//    ft_printf("@moulitest: %5.x %5.0x\n", 0, 0);
+//    ft_printf("@moulitest: %.o %.0o\n", 0, 0);
+//    ft_printf("@moulitest: %5.o %5.0o\n", 0, 0);
+//    ft_printf("%s %s", NULL, "string");
 
 //	printf("%#-08x\n", 42);
 //	ft_printf("%#-08x\n\n", 42);
