@@ -32,7 +32,7 @@ char    *manage_longlong(long long arg, t_print *node)
     node->len += (sign != '0') ? 1: 0;
     if (node->len == count)
     {
-        if (str_smthto[0] == '0')
+        if (str_smthto[0] == '0' && (node->precision == -3 || node->precision == 0))
             str_smthto[0] = 0;
         return (parse_str(str_smthto, node));
     }
@@ -59,7 +59,7 @@ char    *manage_long(long arg, t_print *node)
     node->len += (sign != '0') ? 1: 0;
     if (node->len == count)
     {
-        if (str_smthto[0] == '0')
+        if (str_smthto[0] == '0' && (node->precision == -3 || node->precision == 0))
             str_smthto[0] = 0;
         return (parse_str(str_smthto, node));
     }
@@ -86,7 +86,7 @@ char    *manage_signed_char(signed char arg, t_print *node)
     node->len += (sign != '0') ? 1: 0;
     if (node->len == count)
     {
-        if (str_smthto[0] == '0')
+        if (str_smthto[0] == '0' && (node->precision == -3 || node->precision == 0))
             str_smthto[0] = 0;
         return (parse_str(str_smthto, node));
     }
@@ -113,7 +113,7 @@ char    *manage_short(short arg, t_print *node)
     node->len += (sign != '0') ? 1: 0;
     if (node->len == count)
     {
-        if (str_smthto[0] == '0')
+        if (str_smthto[0] == '0' && (node->precision == -3 || node->precision == 0))
             str_smthto[0] = 0;
         return (parse_str(str_smthto, node));
     }
@@ -140,7 +140,7 @@ char    *manage_int(int arg, t_print *node)
     node->len += (sign != '0') ? 1: 0;
     if (node->len == count)
     {
-        if (str_smthto[0] == '0')
+        if (str_smthto[0] == '0' && (node->precision == -3 || node->precision == 0))
             str_smthto[0] = 0;
         return (parse_str(str_smthto, node));
     }

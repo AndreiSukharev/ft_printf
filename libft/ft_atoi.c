@@ -21,7 +21,7 @@ int		ft_atoi(const char *str)
 	znak = 1;
 	res = 0;
 	i = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ' || str[i] == '*')
 		i++;
 	if (ft_strlen(str) >= 19 && ft_strcmp(str, "9223372036854775807") >= 0)
 		return (-1);

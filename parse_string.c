@@ -34,10 +34,9 @@ char    *parse_str(char *arg, t_print *node)
     char    *str;
     char    *ptr_arg;
     size_t  len;
-    size_t  width;
 
     if (!arg)
-        arg = "(null)";
+        arg = ft_strdup("(null)");
     if (node->precision >= 0 && node->type == 's' && ft_strlen(arg) > 0)
     {
         ptr_arg = ft_strnew(ft_strlen(arg) - (size_t)node->precision);
@@ -47,13 +46,13 @@ char    *parse_str(char *arg, t_print *node)
         ptr_arg = arg;
     len = ft_strlen(ptr_arg);
     node->width = node->width > 0 ? node->width : 0;
-    width = len > (size_t)node->width ? len : (size_t)node->width;
-    str = ft_strnew(width);
+    node->width = (int )len > node->width ? (int)len : node->width;
+    str = ft_strnew(node->width);
     if (node->flag[4] == '0' && node->precision == -1 && check_flag_0(node))
-        ft_memset(str, '0', width);
+        ft_memset(str, '0', node->width);
     else
-        ft_memset(str, ' ', width);
-    ft_strcpy_from(str, ptr_arg, node->flag[0] == '-' ? 0 : width-len);
+        ft_memset(str, ' ', node->width);
+    ft_strcpy_from(str, ptr_arg, node->flag[0] == '-' ? 0 : node->width-len);
 
 //    ft_strdel(&arg);
     return (str);
@@ -74,7 +73,10 @@ char    *parse_char(char arg, t_print *node)
 //        node->res = ft_strcpy(ft_strnew(node->common_len), node->res);
         return (str);
     }
-    ft_memset(str, ' ', width);
+    if (node->flag[4] == '0' && node->precision == -1 && node->flag[0] != '-')
+        ft_memset(str, '0', width);
+    else
+        ft_memset(str, ' ', width);
     if (node->flag[0] == '-')
         str[0] = arg;
     else

@@ -105,6 +105,7 @@ t_print *init_tprint()
     node->len = 0;
     node->common_len = 0;
     node->res = ft_strnew(0);
+    node->next_arg = 0;
     return node;
 }
 

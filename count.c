@@ -16,8 +16,8 @@ size_t	 ft_count_short(short n)
 {
     size_t	count;
 
-    if (n < 1)
-        return (0);
+    if (n == 0)
+        return (1);
     count = 0;
     while (n)
     {
@@ -31,8 +31,8 @@ size_t	 ft_count_signed_char(signed char n)
 {
     size_t	count;
 
-    if (n < 1)
-        return (0);
+    if (n == 0)
+        return (1);
     count = 0;
     while (n)
     {
@@ -42,13 +42,12 @@ size_t	 ft_count_signed_char(signed char n)
     return (count);
 }
 
-
 size_t	ft_count_long(long n)
 {
     size_t	count;
 
-    if (n < 1)
-        return (0);
+    if (n == 0)
+        return (1);
     count = 0;
     while (n)
     {
@@ -62,8 +61,8 @@ size_t	ft_count_longlong(long long n)
 {
     size_t	count;
 
-    if (n < 1)
-        return (0);
+    if (n == 0)
+        return (1);
     count = 0;
     while (n)
     {

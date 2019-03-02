@@ -12,6 +12,15 @@
 
 #include "ft_printf.h"
 
+
+void ft_strput_width(char *str, t_print * node)
+{
+    if (node->flag[4] == '0' && node->precision == -1 && check_flag_0(node))
+        ft_memset(str, '0', node->width);
+    else
+        ft_memset(str, ' ', node->width);
+}
+
 void ft_strlcat_all(char *restrict dst, const char *restrict src, size_t size)
 {
     size_t		i;

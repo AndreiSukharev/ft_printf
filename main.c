@@ -17,11 +17,26 @@ int		main(void)
 {
 //    char *str;
 
-    printf("%u\n", 0);
-    printf("%u\n-------\n", 4294967296);
 
-    ft_printf("%u\n", 0);
-    ft_printf("%u\n", 4294967296);
+    printf("{%05.*d}\n", -15, 42);
+    ft_printf("{%05.*d}", -15, 42);
+//    printf("%*.*d\n", 0, 3, 0);
+//    printf("{%*3d}\n____\n", 5, 0);
+//    ft_printf("%*.*d\n", 0, 3, 0);
+//    ft_printf("{%*3d}", 5, 0);
+//    printf("%hd%hd\n", (short int)0, (short int)42);
+//    printf("%hhi%hhi\n____\n", 0, 42);
+//
+//    ft_printf("%hd%hd\n", (short int)0, (short int)42);
+//    ft_printf("%hhi%hhi\n", 0, 42);
+
+//    ft_printf("%lu", -42);
+
+//    printf("%u\n", 0);
+//    printf("%u\n-------\n", 4294967296);
+//
+//    ft_printf("%u\n", 0);
+//    ft_printf("%u\n", 4294967296);
 //    printf("%hd\n", -32768);
 //    printf("%hd\n", 32768);
 //    printf("%hd\n---------\n", -32769);

@@ -26,6 +26,7 @@ typedef struct  s_print
     int         len;
     size_t      common_len;
     char        *res;
+    int         next_arg;
 }               t_print;
 
 int             ft_printf(const char * restrict format, ...);
@@ -43,10 +44,10 @@ void            rewrite_tprint(t_print *node);
 size_t          parse_format(const char *format, t_print *node);
 
 size_t          check_flag(const char *format, t_print *node);
-int             check_width(const char *format);
-int             check_precision(const char *format);
+size_t          check_width(const char *format, t_print *node);
+size_t          check_precision(const char *format, t_print *node);
 size_t          check_size(const char *format, t_print *node);
-char            check_type(char format);
+size_t          check_type(char format, t_print *node);
 
 char            *parse_str(char *arg, t_print *node);
 char            *parse_char(char arg, t_print *node);

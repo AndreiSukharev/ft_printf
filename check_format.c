@@ -44,51 +44,63 @@ size_t   check_flag(const char *format, t_print *node)
     return (i);
 }
 
-int    check_width(const char *format)
+size_t    check_width(const char *format, t_print *node)
 {
     size_t  i;
     char    *str;
-    int     res;
 
     i = 0;
     if (format[0] == '*')
     {
-        return (-2);
-    }
-    while (format[i] >= '0' && format[i] <= '9')
-    {
+        node->width = -2;
         i++;
     }
+    while (format[i] >= '0' && format[i] <= '9')
+        i++;
     if (i == 0)
-        return (-1);
+        return (0);
+    if (i == 1 && node->width == -2)
+        return (1);
+    if (format[i] == '*')
+    {
+        node->width = -2;
+        return (i + 1);
+    }
+    if (node->width == -2)
+        node->next_arg = 1;
     str = ft_strnew(i);
     str = ft_strncat(str, format, i);
-    res = ft_atoi(str);
+    node->width = ft_atoi(str);
     ft_strdel(&str);
-    return (res);
+    return (i);
 }
 
-int    check_precision(const char *format)
+size_t   check_precision(const char *format, t_print *node)
 {
     size_t  i;
     char    *str;
-    int     res;
 
     i = 1;
     if (format[0] != '.')
-        return (-1);
+        return (0);
     if (format[1] == '*')
-        return (-2);
+    {
+        node->precision = -2;
+        return (2);
+    }
     while (format[i] >= '0' && format[i] <= '9')
         i++;
     if (i == 1)
-        return (-3);
+    {
+        node->precision = -3;
+        return (1);
+    }
     i--;
     str = ft_strnew(i);
     str = ft_strncat(str, &format[1], i);
-    res = ft_atoi(str);
+    node->precision = ft_atoi(str);
     ft_strdel(&str);
-    return res;
+    return (i + 1);
 }
 
 size_t     check_size(const char *format, t_print *node)
@@ -124,11 +136,15 @@ size_t     check_size(const char *format, t_print *node)
     return (i);
 }
 
-char    check_type(char format)
+size_t    check_type(char format, t_print *node)
 {
     if (format == 'c' || format == 's' || format == 'p' || format == 'd' || format == 'i' || format == 'o' ||
-        format == 'u' || format == 'x' || format == 'X' || format == 'f')
-        return(format);
+        format == 'u' || format == 'x' || format == 'X' || format == 'f'|| format == 'e' || format == 'g'
+        || format == 'b'|| format == 'r' || format == 'k')
+    {
+        node->type = format;
+        return(1);
+    }
     else
-        return ('0');
+        return (0);
 }
