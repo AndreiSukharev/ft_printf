@@ -17,6 +17,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o"
   "CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.o"
   "CMakeFiles/make-build-debug/ft_printf.dir/temp.c.o"
+  "CMakeFiles/make-build-debug/ft_printf.dir/str.c.o"
   "make-build-debug/ft_printf.pdb"
   "make-build-debug/ft_printf"
 )

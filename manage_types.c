@@ -14,17 +14,18 @@
 
 char   *manage_di(char *str_smthto, t_print *node, char sign)
 {
-    char *str_prec;
-    char *res;
+    char *str_width;
+    size_t len_str;
+    size_t padding_prec;
 
-    str_prec = ft_strnew(node->len);
-    if (sign != '0')
-        str_prec[0] = sign;
-    di_precision(str_prec, node);
-    res = ft_strjoin(str_prec, sign == '-' ? &str_smthto[1] : str_smthto);
-    ft_strdel(&str_prec);
+    len_str = ft_strlen(str_smthto);
+    node->width = node->len > node->width ? node->len : node->width;
+    str_width = ft_strnew(node->width);
+    set_width_and_sign(str_width, node, sign);
+    padding_prec = di_precision(str_width, node, node->precision - len_str);
+    ft_strcpy_from(str_width, str_smthto, node->flag[0] == '-' ? padding_prec : node->width-len_str);
     ft_strdel(&str_smthto);
-    return (parse_str(res, node));
+    return (str_width);
 }
 
 char *manage_uox(char *arg, t_print *node)
@@ -33,7 +34,7 @@ char *manage_uox(char *arg, t_print *node)
     char *res;
     int count;
 
-    if (arg[0] == '0' && node->type != 'o' && (node->precision == -3 || node->precision == 0))
+    if (arg[0] == '0' && (node->precision == -3 || node->precision == 0) && (node->type != 'o' || node->flag[3] != '#'))
         return (parse_str(ft_strnew(node->width < 0 ? 0 : node->width), node));
     else if (arg[0] == '0')
         return (arg);

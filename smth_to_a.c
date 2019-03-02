@@ -22,6 +22,8 @@ char		*ft_short_toa(short n)
     str = ft_strnew(len);
     if (!str)
         return (0);
+    if (n == -32768)
+        return (ft_strdup("32768"));
     sign = n < 0 ? 1 : 0;
     if (n < 0)
         n *= -1;
@@ -45,6 +47,8 @@ char		*ft_signed_char_toa(signed char n)
     str = ft_strnew(len);
     if (!str)
         return (0);
+    if (n == -128)
+        return (ft_strdup("128"));
     sign = n < 0 ? 1 : 0;
     if (n < 0)
         n *= -1;
@@ -68,6 +72,8 @@ char		*ft_long_toa(long n)
     str = ft_strnew(len);
     if (!str)
         return (0);
+    if (n == -2147483648)
+        return (ft_strdup("2147483648"));
     sign = n < 0 ? 1 : 0;
     if (n < 0)
         n *= -1;
@@ -91,6 +97,8 @@ char		*ft_longlong_toa(long long n)
     str = ft_strnew(len);
     if (!str)
         return (0);
+    if (n == -9223372036854775808)
+        return (ft_strdup("9223372036854775808"));
     sign = n < 0 ? 1 : 0;
     if (n < 0)
         n *= -1;

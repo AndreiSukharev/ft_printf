@@ -582,6 +582,33 @@ smth_un_to_a.c.s:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.s
 .PHONY : smth_un_to_a.c.s
 
+str.o: str.c.o
+
+.PHONY : str.o
+
+# target to build an object file
+str.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/str.c.o
+.PHONY : str.c.o
+
+str.i: str.c.i
+
+.PHONY : str.i
+
+# target to preprocess a source file
+str.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/str.c.i
+.PHONY : str.c.i
+
+str.s: str.c.s
+
+.PHONY : str.s
+
+# target to generate assembly for a file
+str.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/str.c.s
+.PHONY : str.c.s
+
 temp.o: temp.c.o
 
 .PHONY : temp.o
@@ -669,6 +696,9 @@ help:
 	@echo "... smth_un_to_a.o"
 	@echo "... smth_un_to_a.i"
 	@echo "... smth_un_to_a.s"
+	@echo "... str.o"
+	@echo "... str.i"
+	@echo "... str.s"
 	@echo "... temp.o"
 	@echo "... temp.i"
 	@echo "... temp.s"

@@ -12,20 +12,41 @@
 
 #include "ft_printf.h"
 
-void       di_precision(char *str, t_print *node)
+void    set_width_and_sign(char *str, t_print *node, char sign)
 {
-    char    c;
-    int     i;
+    if (node->flag[4] == '0' && node->precision == -1 && node->flag[0] != '-')
+        ft_memset(str, '0', node->width);
+    else
+        ft_memset(str, ' ', node->width);
+    if (sign == '0')
+        return;
+    if (node->flag[0] == '-' || (node->flag[4] == '0' && node->precision == -1))
+        str[0] = sign;
+    else
+        str[node->width - node->len] = sign;
+}
+size_t       di_precision(char *str, t_print *node, size_t count_zero)
+{
+    size_t     i;
 
-    i = 0;
-    c = ' ';
-    if (node->flag[4] == '0' || node->precision != -1)
-        c = '0';
-    if (str[0] == '-' || str[i] =='+')
-        i++;
-    while (i < node->len)
-        str[i++] = c;
-
+    if (!count_zero || node->precision == -1)
+    {
+        if (str[0] == '-' || str[0] == '+')
+            return (1);
+        return (0);
+    }
+    if (node->flag[0] == '-' )
+    {
+        if (str[0] != '-' && str[0] != '+')
+            i = 0;
+        else
+            i = 1;
+    }
+    else
+        i = node->width - node->precision;
+    while (count_zero--)
+        str[i++] = '0';
+    return (i);
 }
 
 void       oux_precision(char *str, t_print *node, int len)

@@ -37,7 +37,7 @@ void main_result(const char *format, va_list ap, t_print *node)
     index = 0;
     while (format[index])
     {
-        node->res = get_str_before_percent(&format[index], node->res, node);
+        node->res = get_str_before_percent(&format[index], node);
 //        node->common_len += ft_strlen(node->res);
         tmp = find_percent(&format[index]);
         if (format[index + tmp] == '\0')
@@ -50,8 +50,8 @@ void main_result(const char *format, va_list ap, t_print *node)
         }
         arg = parse_what(ap, node);
         node->common_len += ft_strlen(arg);
-        node->res = ft_strjoin(node->res, arg);
-        ft_strdel(&arg);
+        node->res = ft_strjoin_all(arg, node);
+//        ft_strdel(&arg);
         rewrite_tprint(node);
     }
 }

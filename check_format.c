@@ -29,7 +29,7 @@ size_t   check_flag(const char *format, t_print *node)
         }
         else if (format[i] == ' ')
         {
-            node->flag[2] = ' ';
+            node->flag[2] =  node->flag[1] != '+' ? ' ' : '1';
         }
         else if (format[i] == '#')
         {

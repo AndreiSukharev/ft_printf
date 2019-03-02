@@ -71,6 +71,7 @@ char    *parse_char(char arg, t_print *node)
     if (width <= 1)
     {
         str[0] = arg;
+//        node->res = ft_strcpy(ft_strnew(node->common_len), node->res);
         return (str);
     }
     ft_memset(str, ' ', width);

@@ -12,21 +12,21 @@
 
 #include "ft_printf.h"
 
-char	*ft_strncat_percent(char *restrict s1, const char *restrict s2, size_t n)
+char	*ft_strncat_percent(char *restrict s1, const char *restrict s2, t_print *node)
 {
     size_t		i;
     size_t		len;
 
     i = 0;
-    len = ft_strlen(s1);
-    while (s2[i] && i < n)
+    len = node->common_len;
+    while (s2[i] && i < node->len)
     {
-        while (s2[i] == '%' && i < n)
+        while (s2[i] == '%' && i < node->len)
         {
             s1[len++] = '%';
             i += 2;
         }
-        if (i >= n)
+        if (i >= node->len)
             break;
         s1[len] = s2[i];
         i++;
@@ -36,7 +36,7 @@ char	*ft_strncat_percent(char *restrict s1, const char *restrict s2, size_t n)
     return (s1);
 }
 
-size_t     find_percent(const char *str)
+size_t    find_percent(const char *str)
 {
     size_t i;
 
@@ -49,17 +49,17 @@ size_t     find_percent(const char *str)
 
 }
 
-char    *get_str_before_percent(const char *format, char *old_output, t_print *node)
+char    *get_str_before_percent(const char *format, t_print *node)
 {
     char    *new_str;
-    size_t  size_format;
 
-    size_format = find_percent(format);
-    node->common_len += size_format;
-    new_str = ft_strnew(size_format + ft_strlen(old_output));
-    new_str = ft_strcpy(new_str, old_output);
-    new_str = ft_strncat_percent(new_str, format, size_format);
-    ft_strdel(&old_output);
+    node->len = find_percent(format);
+    new_str = ft_strnew(node->len + node->common_len);
+    ft_strlcat_all(new_str, node->res, node->common_len);
+    new_str = ft_strncat_percent(new_str, format, node);
+    ft_strdel(&node->res);
+    node->common_len += node->len;
+    node->len = 0;
     return (new_str);
 }
 

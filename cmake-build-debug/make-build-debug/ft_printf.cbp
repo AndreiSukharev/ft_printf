@@ -134,6 +134,9 @@
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/smth_un_to_a.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/str.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/temp.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>

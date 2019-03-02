@@ -69,6 +69,10 @@ CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.o: ../ft_printf.h
 CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.o: ../libft/libft.h
 CMakeFiles/make-build-debug/ft_printf.dir/smth_un_to_a.c.o: ../smth_un_to_a.c
 
+CMakeFiles/make-build-debug/ft_printf.dir/str.c.o: ../ft_printf.h
+CMakeFiles/make-build-debug/ft_printf.dir/str.c.o: ../libft/libft.h
+CMakeFiles/make-build-debug/ft_printf.dir/str.c.o: ../str.c
+
 CMakeFiles/make-build-debug/ft_printf.dir/temp.c.o: ../ft_printf.h
 CMakeFiles/make-build-debug/ft_printf.dir/temp.c.o: ../libft/libft.h
 CMakeFiles/make-build-debug/ft_printf.dir/temp.c.o: ../temp.c

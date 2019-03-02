@@ -12,7 +12,6 @@
 
 #include "ft_printf.h"
 
-
 char *check_another_percent(const char *format, size_t index, t_print *node)
 {
     char *str;
@@ -35,7 +34,7 @@ char *check_another_percent(const char *format, size_t index, t_print *node)
 
 int check_flag_0(t_print *node)
 {
-    if (node->flag[0] == '-' || node->flag[0] == '+' || node->flag[0] == ' ')
+    if (node->flag[0] == '-' || node->flag[1] == '+' || node->flag[2] == ' ')
         return (0);
     return (1);
 
