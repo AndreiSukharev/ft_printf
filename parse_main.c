@@ -14,14 +14,20 @@
 
 size_t      parse_format(const char *format, t_print *node)
 {
-    size_t     index;
+    size_t  index;
 
     index = find_percent(format);
     index++;
     index += check_flag(&format[index], node);
     index += check_width(&format[index], node);
+    index += format[index] == '+' || format[index] == '-'  || format[index] == ' ' || format[index] == '#'
+            || format[index] == '0' ? check_flag(&format[index], node) : 0;
     index += check_precision(&format[index], node);
+    index += format[index] == '+' || format[index] == '-'  || format[index] == ' ' || format[index] == '#'
+             || format[index] == '0' ? check_flag(&format[index], node) : 0;
     index += check_size(&format[index], node);
+    index += format[index] == '+' || format[index] == '-'  || format[index] == ' ' || format[index] == '#'
+             || format[index] == '0' ? check_flag(&format[index], node) : 0;
     index += check_type(format[index], node);
     return (index);
 }
@@ -33,7 +39,7 @@ char *parse_csp(va_list ap, t_print *node)
     if (node->next_arg == 1)
         va_arg(ap, int);
     if (node->width == -2)
-        node->width = va_arg(ap, int);
+        node->width = check_width_after_va(va_arg(ap, int), node);
     if (node->precision == -2)
         node->precision = va_arg(ap, int);
 
@@ -53,7 +59,7 @@ char *parse_dioux_size(va_list ap, t_print *node)
     if (node->next_arg == 1)
         va_arg(ap, int);
     if (node->width == -2)
-        node->width = va_arg(ap, int);
+        node->width = check_width_after_va(va_arg(ap, int), node);
     if (node->precision == -2)
         node->precision = va_arg(ap, int);
 
@@ -83,7 +89,7 @@ char *parse_dioux(va_list ap, t_print *node)
     if (node->next_arg == 1)
         va_arg(ap, int);
     if (node->width == -2)
-        node->width = va_arg(ap, int);
+        node->width = check_width_after_va(va_arg(ap, int), node);
     if (node->precision == -2)
         node->precision = va_arg(ap, int);
 
@@ -103,7 +109,7 @@ char        *parse_feg(va_list ap, t_print *node)
     if (node->next_arg == 1)
         va_arg(ap, int);
     if (node->width == -2)
-        node->width = va_arg(ap, int);
+        node->width = check_width_after_va(va_arg(ap, int), node);
     if (node->precision == -2)
         node->precision = va_arg(ap, int);
 

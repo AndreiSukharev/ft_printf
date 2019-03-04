@@ -12,26 +12,51 @@
 
 #include "ft_printf.h"
 
-char *check_another_percent(const char *format, size_t index, t_print *node)
+size_t  check_another_percent(const char *format, t_print *node)
 {
     char *str;
+    size_t index_percent;
+    size_t i;
+    char *tmp;
 
-    if (format[index] == '%' && !format[index + 1])
-        return ("");
-    index++;
-    while (format[index] && format[index] != '%')
+    i = 0;
+    index_percent = find_percent(format);
+    while (format[i] != 'Z' && format[i] != 'd' && format[i] != 's' && format[i] != 'c' && format[i] != 'f' &&
+        format[i] != 'X' && format[i] != 'u' && format[i] != 'o' && i < index_percent)
+        i++;
+    if (format[i] == 'Z')
     {
-        index++;
+        tmp = ft_strnew(index_percent - i);
+        ft_strlcat_all(tmp, format, index_percent - i);
+        str = parse_str(tmp, node);
+        ft_strdel(&tmp);
     }
-    if (format[index] == '%')
-    {
+    else if (format[index_percent] == '%')
         str = parse_str("%", node);
-        node->common_len += ft_strlen(str);
-        return (str);
+    else if (format[i] == 'd' || format[i] == 's' || format[i] == 'c' || format[i] == 'x' || format[i] == 'f' ||
+        format[i] == 'X' || format[i] == 'u' || format[i] == 'o')
+    {
+        node->type = format[i];
+        return (i + 1);
     }
-    return (parse_str("", node));
+
+    else
+        str = parse_str("", node);
+    node->common_len += ft_strlen(str);
+    node->res = ft_strjoin(node->res, str);
+    return (index_percent);
 }
 
+int check_width_after_va(int n, t_print * node)
+{
+    if (n < 0)
+    {
+        n *= -1;
+        node->flag[0] = '-';
+        return (n);
+    }
+    return (n);
+}
 int check_flag_0(t_print *node)
 {
     if (node->flag[0] == '-' || node->flag[1] == '+' || node->flag[2] == ' ')

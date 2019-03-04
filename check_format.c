@@ -79,28 +79,30 @@ size_t   check_precision(const char *format, t_print *node)
 {
     size_t  i;
     char    *str;
+    size_t temp;
 
-    i = 1;
+    i = 0;
     if (format[0] != '.')
         return (0);
-    if (format[1] == '*')
+    while (format[i] == '.')
     {
-        node->precision = -2;
-        return (2);
-    }
-    while (format[i] >= '0' && format[i] <= '9')
         i++;
-    if (i == 1)
-    {
-        node->precision = -3;
-        return (1);
+        temp = i;
+        if (format[i] == '*')
+            node->precision = -2;
+        while (format[i] >= '0' && format[i] <= '9')
+            i++;
+        if (temp != i)
+        {
+            str = ft_strnew(i - temp);
+            str = ft_strncat(str, &format[temp], i - temp);
+            node->precision = ft_atoi(str);
+            ft_strdel(&str);
+        }
+        if (format[i - 1] == '.' && format[i] != '*')
+            node->precision = -3;
     }
-    i--;
-    str = ft_strnew(i);
-    str = ft_strncat(str, &format[1], i);
-    node->precision = ft_atoi(str);
-    ft_strdel(&str);
-    return (i + 1);
+    return (i);
 }
 
 size_t     check_size(const char *format, t_print *node)
@@ -108,30 +110,30 @@ size_t     check_size(const char *format, t_print *node)
     size_t  i;
 
     i = 0;
-    if (format[0] == 'h')
+    while (format[i] == 'h' || format[i] == 'l' || format[i] == 'L')
     {
-        node->size[0] = 'h';
-        i = 1;
-        if (format[1] == 'h')
+        node->size[1] = '0';
+        if (format[i] == 'h')
         {
-            node->size[1] = 'h';
-            return (2);
+            node->size[0] = 'h';
+            if (format[i + 1] == 'h')
+            {
+                node->size[1] = 'h';
+                i++;
+            }
         }
-    }
-    if (format[0] == 'l')
-    {
-        node->size[0] = 'l';
-        i = 1;
-        if (format[1] == 'l')
+        else if (format[i] == 'l')
         {
-            node->size[1] = 'l';
-            return (2);
+            node->size[0] = 'l';
+            if (format[i + 1] == 'l')
+            {
+                node->size[1] = 'l';
+                i++;
+            }
         }
-    }
-    else if (format[0] == 'L')
-    {
-        node->size[0] = 'L';
-        return (1);
+        else if (format[i] == 'L')
+            node->size[0] = 'L';
+        i++;
     }
     return (i);
 }

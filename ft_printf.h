@@ -60,7 +60,7 @@ char	        *ft_base_xo_long(unsigned long n, t_print *node, int base);
 char	        *ft_base_xo_longlong(unsigned long long n, t_print *node, int base);
 
 void            set_width_and_sign(char * str, t_print *node, char sign);
-size_t            di_precision(char *str, t_print *node, size_t count_zero);
+size_t            di_precision(char *str, t_print *node, int count_zero);
 void            oux_precision(char *str, t_print *node, int len);
 
 size_t	        ft_count_short(short n);
@@ -104,11 +104,13 @@ char            *manage_float(long double f, t_print *node);
 long long       ft_pow(long long a, int b);
 long long       intToStr_float(long long x, char str[], int d);
 
-char            *check_another_percent(const char *format, size_t index, t_print *node);
+size_t           check_another_percent(const char *format, t_print *node);
 int             check_flag_0(t_print *node);
+int             check_width_after_va(int n, t_print * node);
 char            *parse_str_oux(char *ptr_arg, t_print *node);
 void            find_and_del_x(char *str);
 
+void            ft_strput_width(char *str, t_print * node);
 void            ft_strlcat_all(char *restrict dst, const char *restrict src, size_t size);
 char	        *ft_strjoin_all(char *arg, t_print *node);
 

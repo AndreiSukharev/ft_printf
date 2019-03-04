@@ -12,59 +12,25 @@
 
 #include "ft_printf.h"
 
-
 int		main(void)
 {
 //    char *str;
+//
+//    printf("{%f}\n", 1.42);
+//    ft_printf("{%f}", 1.42);
 
 
-    printf("{%05.*d}\n", -15, 42);
-    ft_printf("{%05.*d}", -15, 42);
-//    printf("%*.*d\n", 0, 3, 0);
-//    printf("{%*3d}\n____\n", 5, 0);
-//    ft_printf("%*.*d\n", 0, 3, 0);
-//    ft_printf("{%*3d}", 5, 0);
-//    printf("%hd%hd\n", (short int)0, (short int)42);
-//    printf("%hhi%hhi\n____\n", 0, 42);
+//    printf("{%5p}\n", 0);
+//    ft_printf("{%5p}\n", 0);
 //
-//    ft_printf("%hd%hd\n", (short int)0, (short int)42);
-//    ft_printf("%hhi%hhi\n", 0, 42);
+//    printf("%p\n", 0);
+//    ft_printf("%p\n", 0);
+//
+//    printf("{%05.c}\n", 0);
+//    ft_printf("{%05.c}\n", 0);
 
-//    ft_printf("%lu", -42);
-
-//    printf("%u\n", 0);
-//    printf("%u\n-------\n", 4294967296);
-//
-//    ft_printf("%u\n", 0);
-//    ft_printf("%u\n", 4294967296);
-//    printf("%hd\n", -32768);
-//    printf("%hd\n", 32768);
-//    printf("%hd\n---------\n", -32769);
-//
-//    ft_printf("%hd\n", -32768);
-//    ft_printf("%hd\n", 32768);
-//    ft_printf("%hd", -32769);
-
-    //    printf("%-5d\n", -42);
-//    printf("%-05d\n\n", -42);
-//
-//    ft_printf("%-5d\n", -42);
-//    ft_printf("%-05d", -42);
-
-//    printf("%-10.5d\n", 4242);
-//    printf("%-+10.5d\n", 4242);
-//    printf("%10.5d\n", 4242);
-//    printf("%-05d\n", -42);
-//    printf("%05d\n\n\n", -42);
-//
-//    ft_printf("%-10.5d\n", 4242);
-//    ft_printf("%-+10.5d\n", 4242);
-//    ft_printf("%10.5d\n", 4242);
-//    ft_printf("%-05d\n", -42);
-//    ft_printf("%05d", -42);
-//    printf("% d\n", 42);
-//
-//    ft_printf("% d", 42);
+    printf("{%}\n");
+    ft_printf("{%}\n");
 
 //    printf("@moulitest: %#.o %#.0o\n", 0, 0);
 //    printf("@moulitest: %#.x %#.0x\n", 0, 0);

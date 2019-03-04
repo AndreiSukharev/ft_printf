@@ -33,6 +33,7 @@ char	*ft_strncat_percent(char *restrict s1, const char *restrict s2, t_print *no
         len++;
     }
     s1[len] = '\0';
+    node->common_len = len;
     return (s1);
 }
 
@@ -41,8 +42,14 @@ size_t    find_percent(const char *str)
     size_t i;
 
     i = 0;
-    while (((str[i] != '%') || (str[i] == '%' && str[i + 1] == '%')) && str[i])
+    while (str[i])
     {
+        while (str[i] == '%' && str[i + 1] == '%')
+        {
+            i += 2;
+        }
+        if (str[i] == '%' || !str[i])
+            return (i);
         i++;
     }
     return (i);
@@ -58,7 +65,7 @@ char    *get_str_before_percent(const char *format, t_print *node)
     ft_strlcat_all(new_str, node->res, node->common_len);
     new_str = ft_strncat_percent(new_str, format, node);
     ft_strdel(&node->res);
-    node->common_len += node->len;
+//    node->common_len += node->len;
     node->len = 0;
     return (new_str);
 }
@@ -77,6 +84,7 @@ void rewrite_tprint(t_print *node)
     node->size[2] = '\0';
     node->type = '0'; // if at the end of function '0' it is this flag does not exist
     node->len = 0;
+    node->next_arg = 0;
 }
 
 void    del_tprint(t_print **node)

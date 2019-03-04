@@ -14,10 +14,7 @@
 
 void    set_width_and_sign(char *str, t_print *node, char sign)
 {
-    if (node->flag[4] == '0' && node->precision == -1 && node->flag[0] != '-')
-        ft_memset(str, '0', node->width);
-    else
-        ft_memset(str, ' ', node->width);
+    ft_strput_width(str, node);
     if (sign == '0')
         return;
     if (node->flag[0] == '-' || (node->flag[4] == '0' && node->precision == -1))
@@ -25,7 +22,7 @@ void    set_width_and_sign(char *str, t_print *node, char sign)
     else
         str[node->width - node->len] = sign;
 }
-size_t       di_precision(char *str, t_print *node, size_t count_zero)
+size_t       di_precision(char *str, t_print *node, int count_zero)
 {
     size_t     i;
 
@@ -44,7 +41,7 @@ size_t       di_precision(char *str, t_print *node, size_t count_zero)
     }
     else
         i = node->width - node->precision;
-    while (count_zero--)
+    while (count_zero-- > 0)
         str[i++] = '0';
     return (i);
 }
