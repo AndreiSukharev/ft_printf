@@ -11,26 +11,91 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <limits.h>
+
+//bonus 10, 52, 79
 
 int		main(void)
 {
 //    char *str;
 //
+//    printf("{%+020f}\n", -123.456);
+//    ft_printf("{%+020f}\n", -123.456);
+//
+//    printf("{% 020f}\n", -123.456);
+//    ft_printf("{% 020f}\n", -123.456);
+//
+//    printf("{%020f}\n", -123.456);
+//    ft_printf("{%020f}\n", -123.456);
+//
+//    printf("{%+020f}\n", 123.456);
+//    ft_printf("{%+020f}\n", 123.456);
+//
+//    printf("{% 020f}\n", 123.456);
+//    ft_printf("{% 020f}\n", 123.456);
+//
+//    printf("{%020f}\n", 123.456);
+//    ft_printf("{%020f}\n", 123.456);
+
+//    printf("{%-020.f}\n", -123.456);
+//    ft_printf("{%-020.f}\n", -123.456);
+
+//    printf("{%f}\n", 123.456);
+//    ft_printf("{%f}\n", 123.456);
+//    ft_printf("{%020f}\n\n", -123.456);
+
+//    ft_printf("%f\n", 123.456789);
+
+//    printf("{%f}\n", 1.49);
+//    ft_printf("{%f}\n\n", 1.49);
+
+//    printf("{%f}\n", -1.456666);
+//    ft_printf("{%f}\n\n", -1.456666);
+//
+//    printf("{%f}\n", 1444565444646.6465424242242);
+//    ft_printf("{%f}\n\n", 1444565444646.6465424242242);
+//    printf("{%f}\n", -1444565444646.6465424242242454654);
+//    ft_printf("{%f}\n", -1444565444646.6465424242242454654);
+
+
+
+
+
+//    printf("{%#.5x}\n", 1);
+//    ft_printf("{%#.5x}\n", 1);
+
+//    printf("%.o", 0);
+//    ft_printf("%.o\n", 0);
+
+//    printf("%#.3o\n", 1);
+//    ft_printf("%#.3o\n", 1);
+
 //    printf("{%f}\n", 1.42);
 //    ft_printf("{%f}", 1.42);
 
+//    printf("{%05p}\n", 2);
+//    ft_printf("{%05p}", 2);
 
+//    printf("%li\n", LONG_MIN);
+//    ft_printf("%li\n", LONG_MIN);
+
+//    printf("%ld\n", LONG_MIN);
+//    ft_printf("%ld\n", LONG_MIN);
+
+
+//    printf("%.p, %.0p\n", 0, 0);
+//    ft_printf("%.p, %.0p\n", 0, 0);
+//
 //    printf("{%5p}\n", 0);
 //    ft_printf("{%5p}\n", 0);
 //
 //    printf("%p\n", 0);
 //    ft_printf("%p\n", 0);
+
+
 //
 //    printf("{%05.c}\n", 0);
 //    ft_printf("{%05.c}\n", 0);
-
-    printf("{%}\n");
-    ft_printf("{%}\n");
 
 //    printf("@moulitest: %#.o %#.0o\n", 0, 0);
 //    printf("@moulitest: %#.x %#.0x\n", 0, 0);

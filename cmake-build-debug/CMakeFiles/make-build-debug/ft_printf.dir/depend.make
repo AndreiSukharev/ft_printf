@@ -29,6 +29,14 @@ CMakeFiles/make-build-debug/ft_printf.dir/main.c.o: ../ft_printf.h
 CMakeFiles/make-build-debug/ft_printf.dir/main.c.o: ../libft/libft.h
 CMakeFiles/make-build-debug/ft_printf.dir/main.c.o: ../main.c
 
+CMakeFiles/make-build-debug/ft_printf.dir/manage_csp.c.o: ../ft_printf.h
+CMakeFiles/make-build-debug/ft_printf.dir/manage_csp.c.o: ../libft/libft.h
+CMakeFiles/make-build-debug/ft_printf.dir/manage_csp.c.o: ../manage_csp.c
+
+CMakeFiles/make-build-debug/ft_printf.dir/manage_dioux.c.o: ../ft_printf.h
+CMakeFiles/make-build-debug/ft_printf.dir/manage_dioux.c.o: ../libft/libft.h
+CMakeFiles/make-build-debug/ft_printf.dir/manage_dioux.c.o: ../manage_dioux.c
+
 CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o: ../ft_printf.h
 CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o: ../libft/libft.h
 CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o: ../manage_feg.c
@@ -36,10 +44,6 @@ CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o: ../manage_feg.c
 CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.o: ../ft_printf.h
 CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.o: ../libft/libft.h
 CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.o: ../manage_size.c
-
-CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.o: ../ft_printf.h
-CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.o: ../libft/libft.h
-CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.o: ../manage_types.c
 
 CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.o: ../ft_printf.h
 CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.o: ../libft/libft.h
@@ -56,10 +60,6 @@ CMakeFiles/make-build-debug/ft_printf.dir/parse_hex.c.o: ../parse_hex.c
 CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.o: ../ft_printf.h
 CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.o: ../libft/libft.h
 CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.o: ../parse_main.c
-
-CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.o: ../ft_printf.h
-CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.o: ../libft/libft.h
-CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.o: ../parse_string.c
 
 CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.o: ../ft_printf.h
 CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.o: ../libft/libft.h

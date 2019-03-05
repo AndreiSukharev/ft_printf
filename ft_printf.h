@@ -99,10 +99,13 @@ char            *manage_unsigned_int(unsigned int arg, t_print *node);
 
 char            *manage_di(char *str_smthto, t_print *node, char sign);
 char            *manage_uox(char *arg, t_print *node);
-char            *manage_float(long double f, t_print *node);
+
+char            *manage_double_f(long double f, t_print *node);
+//char            *manage_double_exp(long double f, t_print *node);
 
 long long       ft_pow(long long a, int b);
 long long       intToStr_float(long long x, char str[], int d);
+//long long       float_after_point(long double dec, long i);
 
 size_t           check_another_percent(const char *format, t_print *node);
 int             check_flag_0(t_print *node);

@@ -114,19 +114,19 @@ char        *parse_feg(va_list ap, t_print *node)
         node->precision = va_arg(ap, int);
 
     if (node->size[0] == 'L' && node->type == 'f')
-        tmp = manage_float(va_arg(ap, long double), node);
+        tmp = manage_double_f(va_arg(ap, long double), node);
     else if (node->type == 'f')
-        tmp = manage_float(va_arg(ap, double), node);
-    else
-        tmp = NULL;
+        tmp = manage_double_f(va_arg(ap, double), node);
 //    else if (node->size[0] == 'L' && node->type == 'e')
-//        tmp = manage_exp(va_arg(ap, long double), node);
+//        tmp = manage_double_exp(va_arg(ap, long double), node);
 //    else if (node->type == 'e')
-//        tmp = manage_exp(va_arg(ap, double), node);
+//        tmp = manage_double_exp(va_arg(ap, double), node);
 //    else if (node->size[0] == 'L' && node->type == 'g')
 //        tmp = manage_g(va_arg(ap, long double), node);
 //    else if (node->type == 'g')
 //        tmp = manage_g(va_arg(ap, double), node);
+    else
+        tmp = NULL;
     return (tmp);
 }
 

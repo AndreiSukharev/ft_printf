@@ -65,6 +65,7 @@ void       oux_precision(char *str, t_print *node, int len)
     {
         str[0] = '0';
         i = 1;
+        len--;
     }
     while (i < len)
         str[i++] = c;

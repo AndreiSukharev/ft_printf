@@ -77,7 +77,7 @@ void rewrite_tprint(t_print *node)
     node->flag[1] = '1';
     node->flag[2] = '1';
     node->flag[3] = '1';
-    node->width = -1; // -2 is *
+    node->width = 0; // -2 is *
     node->precision = -1; //-3 - tochka, -2 is *
     node->size[0] = '0';
     node->size[1] = '0';
@@ -104,7 +104,8 @@ t_print *init_tprint()
     node->flag[1] = '1';
     node->flag[2] = '1';
     node->flag[3] = '1';
-    node->width = -1; // -2 is *
+    node->flag[3] = '\0';
+    node->width = 0; // -2 is *
     node->precision = -1; //-3 - tochka, -2 is *
     node->size[0] = '0';
     node->size[1] = '0';

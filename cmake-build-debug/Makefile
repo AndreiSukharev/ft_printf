@@ -312,6 +312,60 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/main.c.s
 .PHONY : main.c.s
 
+manage_csp.o: manage_csp.c.o
+
+.PHONY : manage_csp.o
+
+# target to build an object file
+manage_csp.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_csp.c.o
+.PHONY : manage_csp.c.o
+
+manage_csp.i: manage_csp.c.i
+
+.PHONY : manage_csp.i
+
+# target to preprocess a source file
+manage_csp.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_csp.c.i
+.PHONY : manage_csp.c.i
+
+manage_csp.s: manage_csp.c.s
+
+.PHONY : manage_csp.s
+
+# target to generate assembly for a file
+manage_csp.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_csp.c.s
+.PHONY : manage_csp.c.s
+
+manage_dioux.o: manage_dioux.c.o
+
+.PHONY : manage_dioux.o
+
+# target to build an object file
+manage_dioux.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_dioux.c.o
+.PHONY : manage_dioux.c.o
+
+manage_dioux.i: manage_dioux.c.i
+
+.PHONY : manage_dioux.i
+
+# target to preprocess a source file
+manage_dioux.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_dioux.c.i
+.PHONY : manage_dioux.c.i
+
+manage_dioux.s: manage_dioux.c.s
+
+.PHONY : manage_dioux.s
+
+# target to generate assembly for a file
+manage_dioux.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_dioux.c.s
+.PHONY : manage_dioux.c.s
+
 manage_feg.o: manage_feg.c.o
 
 .PHONY : manage_feg.o
@@ -365,33 +419,6 @@ manage_size.s: manage_size.c.s
 manage_size.c.s:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.s
 .PHONY : manage_size.c.s
-
-manage_types.o: manage_types.c.o
-
-.PHONY : manage_types.o
-
-# target to build an object file
-manage_types.c.o:
-	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.o
-.PHONY : manage_types.c.o
-
-manage_types.i: manage_types.c.i
-
-.PHONY : manage_types.i
-
-# target to preprocess a source file
-manage_types.c.i:
-	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.i
-.PHONY : manage_types.c.i
-
-manage_types.s: manage_types.c.s
-
-.PHONY : manage_types.s
-
-# target to generate assembly for a file
-manage_types.c.s:
-	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.s
-.PHONY : manage_types.c.s
 
 manage_unsigned_size.o: manage_unsigned_size.c.o
 
@@ -500,33 +527,6 @@ parse_main.s: parse_main.c.s
 parse_main.c.s:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.s
 .PHONY : parse_main.c.s
-
-parse_string.o: parse_string.c.o
-
-.PHONY : parse_string.o
-
-# target to build an object file
-parse_string.c.o:
-	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.o
-.PHONY : parse_string.c.o
-
-parse_string.i: parse_string.c.i
-
-.PHONY : parse_string.i
-
-# target to preprocess a source file
-parse_string.c.i:
-	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.i
-.PHONY : parse_string.c.i
-
-parse_string.s: parse_string.c.s
-
-.PHONY : parse_string.s
-
-# target to generate assembly for a file
-parse_string.c.s:
-	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.s
-.PHONY : parse_string.c.s
 
 smth_to_a.o: smth_to_a.c.o
 
@@ -666,15 +666,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... manage_csp.o"
+	@echo "... manage_csp.i"
+	@echo "... manage_csp.s"
+	@echo "... manage_dioux.o"
+	@echo "... manage_dioux.i"
+	@echo "... manage_dioux.s"
 	@echo "... manage_feg.o"
 	@echo "... manage_feg.i"
 	@echo "... manage_feg.s"
 	@echo "... manage_size.o"
 	@echo "... manage_size.i"
 	@echo "... manage_size.s"
-	@echo "... manage_types.o"
-	@echo "... manage_types.i"
-	@echo "... manage_types.s"
 	@echo "... manage_unsigned_size.o"
 	@echo "... manage_unsigned_size.i"
 	@echo "... manage_unsigned_size.s"
@@ -687,9 +690,6 @@ help:
 	@echo "... parse_main.o"
 	@echo "... parse_main.i"
 	@echo "... parse_main.s"
-	@echo "... parse_string.o"
-	@echo "... parse_string.i"
-	@echo "... parse_string.s"
 	@echo "... smth_to_a.o"
 	@echo "... smth_to_a.i"
 	@echo "... smth_to_a.s"

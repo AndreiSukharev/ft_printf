@@ -72,8 +72,8 @@ char		*ft_long_toa(long n)
     str = ft_strnew(len);
     if (!str)
         return (0);
-    if (n == -2147483648)
-        return (ft_strdup("2147483648"));
+    if (len == 20 && n % 10 == -8)
+        return (ft_strdup("9223372036854775808"));
     sign = n < 0 ? 1 : 0;
     if (n < 0)
         n *= -1;
@@ -97,7 +97,7 @@ char		*ft_longlong_toa(long long n)
     str = ft_strnew(len);
     if (!str)
         return (0);
-    if (n == -9223372036854775808)
+    if (len == 20 && n % 10 == -8)
         return (ft_strdup("9223372036854775808"));
     sign = n < 0 ? 1 : 0;
     if (n < 0)

@@ -15,8 +15,15 @@
 
 void ft_strput_width(char *str, t_print * node)
 {
-    if (node->flag[4] == '0' && node->flag[0] != '-' && (node->precision == -1 ||
-    ( node->precision < 0 && node->precision != -3)))
+
+    if (node->flag[4] == '0' && node->flag[0] != '-' && node->precision < 0
+                                                        && (node->type != 'c' && node->type != 's'))
+    {
+        ft_memset(str, '0', node->width);
+    }
+
+    else if (node->flag[4] == '0' && node->flag[0] != '-' && (node->type == 'c' ||
+                                                        node->type == 's' || node->type == '0'))
         ft_memset(str, '0', node->width);
     else
         ft_memset(str, ' ', node->width);

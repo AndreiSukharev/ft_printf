@@ -12,6 +12,35 @@
 
 #include "ft_printf.h"
 
+
+//long long float_after_point(long double dec, long i)
+//{
+//    int j;
+//    long long tmp;
+//
+//    j = 0;
+//    dec *= dec < 0 ? -1 : 1;
+//    tmp = (long long)dec;
+//    if (i < 7)
+//    {
+//        while (j++ <= 7) {
+//            if (tmp % 10 == 9) {
+//                break;
+//            }
+//            tmp /= 10;
+//        }
+//    }
+//    dec *= ft_pow(10, i + j);
+//    tmp = (long long)dec;
+//    while (j-- > 0)
+//    {
+//        tmp += (tmp % 10) > 0 ? 1 : 0;
+//        tmp /= 10;
+//    }
+//
+//    return ((long long)tmp);
+//}
+
 long long ft_pow(long long a, int b)
 {
     int tmp;
@@ -38,12 +67,15 @@ void reverse(char *str, int len)
 
 long long intToStr_float(long long x, char str[], int d)
 {
-    int i = 0;
+    int i;
+
+    i = 0;
     while (x)
     {
         str[i++] = (char)((x % 10) + '0');
         x = x/10;
     }
+    str[i++] = '.';
     while (i < d)
         str[i++] = '0';
     reverse(str, i);

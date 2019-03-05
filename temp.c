@@ -41,7 +41,8 @@ size_t  check_another_percent(const char *format, t_print *node)
     }
 
     else
-        str = parse_str("", node);
+        str = parse_str(ft_strdup(format), node);
+
     node->common_len += ft_strlen(str);
     node->res = ft_strjoin(node->res, str);
     return (index_percent);

@@ -104,13 +104,16 @@
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/main.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/manage_csp.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/manage_dioux.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/manage_feg.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/manage_size.c">
-			<Option target="make-build-debug/ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/andrei/hack/school42/ft_printf/manage_types.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/manage_unsigned_size.c">
@@ -123,9 +126,6 @@
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/parse_main.c">
-			<Option target="make-build-debug/ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/andrei/hack/school42/ft_printf/parse_string.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/smth_to_a.c">

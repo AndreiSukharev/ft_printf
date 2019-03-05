@@ -100,7 +100,7 @@ size_t   check_precision(const char *format, t_print *node)
             ft_strdel(&str);
         }
         if (format[i - 1] == '.' && format[i] != '*')
-            node->precision = -3;
+            node->precision = 0;
     }
     return (i);
 }

@@ -34,8 +34,8 @@ char *manage_uox(char *arg, t_print *node)
     char *res;
     int count;
 
-    if (arg[0] == '0' && (node->precision == -3 || node->precision == 0) && (node->type != 'o' || node->flag[3] != '#'))
-        return (parse_str(ft_strnew(node->width < 0 ? 0 : node->width), node));
+    if (arg[0] == '0' && (node->precision == 0) && (node->type != 'o' || node->flag[3] != '#'))
+        return (parse_str(ft_strnew(node->width), node));
     else if (arg[0] == '0')
         return (arg);
     count = (int)ft_strlen(arg);

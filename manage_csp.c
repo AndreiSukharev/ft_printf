@@ -33,24 +33,22 @@ char    *parse_str(char *arg, t_print *node)
 {
     char    *str;
     char    *ptr_arg;
-    size_t  len;
 
     if (!arg)
         arg = ft_strdup("(null)");
-    if (node->precision >= 0 && node->type == 's' && ft_strlen(arg) > 0)
+    node->len = ft_strlen(arg);
+    if (node->precision >= 0 && node->type == 's' && node->len > node->precision )
     {
-        ptr_arg = ft_strnew(ft_strlen(arg) - (size_t)node->precision);
-        ptr_arg = ft_strncpy(ptr_arg, arg, (size_t)node->precision);
+        ptr_arg = ft_strnew(node->precision);
+        ptr_arg = ft_strncpy(ptr_arg, arg, node->precision);
     }
     else
         ptr_arg = arg;
-    len = ft_strlen(ptr_arg);
-    node->width = node->width > 0 ? node->width : 0;
-    node->width = (int )len > node->width ? (int)len : node->width;
+    node->len = ft_strlen(ptr_arg);
+    node->width = node->len > node->width ? node->len : node->width;
     str = ft_strnew(node->width);
     ft_strput_width(str, node);
-    ft_strcpy_from(str, ptr_arg, node->flag[0] == '-' ? 0 : node->width-len);
-
+    ft_strcpy_from(str, ptr_arg, node->flag[0] == '-' ? 0 : node->width-node->len);
 //    ft_strdel(&arg);
     return (str);
 }
@@ -60,14 +58,13 @@ char    *parse_char(char arg, t_print *node)
 {
     char    *str;
 
-    node->width = node->width > 1 ? (size_t)node->width : 1;
+    node->width = node->width > 1 ? node->width : 1;
     str = ft_strnew(node->width);
     node->common_len += arg == 0 ? 1 : 0;
 
     if (node->width <= 1)
     {
         str[0] = arg;
-//        node->res = ft_strcpy(ft_strnew(node->common_len), node->res);
         return (str);
     }
     ft_strput_width(str, node);
@@ -89,7 +86,10 @@ char *parse_address(long address, t_print *node)
     char *str_prec;
     char *res;
 
-    str_base = ft_base_hex(address);
+    if (address == 0 && node->precision != 0)
+        str_base = ft_strdup("0");
+    else
+        str_base = ft_base_hex(address);
     count_long = (int)ft_strlen(str_base);
     len = node->precision > count_long ? node->precision - count_long : 0;
     str_prec = ft_strnew((size_t)len + 2);
@@ -97,5 +97,7 @@ char *parse_address(long address, t_print *node)
     res = ft_strjoin(str_prec, str_base);
     ft_strdel(&str_prec);
     ft_strdel(&str_base);
+
+
     return (parse_str(res, node));
 }

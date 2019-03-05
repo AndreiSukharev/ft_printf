@@ -29,6 +29,14 @@ CMakeFiles/make-build-debug/ft_printf.dir/main.c.o
  /Users/andrei/hack/school42/ft_printf/ft_printf.h
  /Users/andrei/hack/school42/ft_printf/libft/libft.h
  /Users/andrei/hack/school42/ft_printf/main.c
+CMakeFiles/make-build-debug/ft_printf.dir/manage_csp.c.o
+ /Users/andrei/hack/school42/ft_printf/ft_printf.h
+ /Users/andrei/hack/school42/ft_printf/libft/libft.h
+ /Users/andrei/hack/school42/ft_printf/manage_csp.c
+CMakeFiles/make-build-debug/ft_printf.dir/manage_dioux.c.o
+ /Users/andrei/hack/school42/ft_printf/ft_printf.h
+ /Users/andrei/hack/school42/ft_printf/libft/libft.h
+ /Users/andrei/hack/school42/ft_printf/manage_dioux.c
 CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o
  /Users/andrei/hack/school42/ft_printf/ft_printf.h
  /Users/andrei/hack/school42/ft_printf/libft/libft.h
@@ -37,10 +45,6 @@ CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.o
  /Users/andrei/hack/school42/ft_printf/ft_printf.h
  /Users/andrei/hack/school42/ft_printf/libft/libft.h
  /Users/andrei/hack/school42/ft_printf/manage_size.c
-CMakeFiles/make-build-debug/ft_printf.dir/manage_types.c.o
- /Users/andrei/hack/school42/ft_printf/ft_printf.h
- /Users/andrei/hack/school42/ft_printf/libft/libft.h
- /Users/andrei/hack/school42/ft_printf/manage_types.c
 CMakeFiles/make-build-debug/ft_printf.dir/manage_unsigned_size.c.o
  /Users/andrei/hack/school42/ft_printf/ft_printf.h
  /Users/andrei/hack/school42/ft_printf/libft/libft.h
@@ -57,10 +61,6 @@ CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.o
  /Users/andrei/hack/school42/ft_printf/ft_printf.h
  /Users/andrei/hack/school42/ft_printf/libft/libft.h
  /Users/andrei/hack/school42/ft_printf/parse_main.c
-CMakeFiles/make-build-debug/ft_printf.dir/parse_string.c.o
- /Users/andrei/hack/school42/ft_printf/ft_printf.h
- /Users/andrei/hack/school42/ft_printf/libft/libft.h
- /Users/andrei/hack/school42/ft_printf/parse_string.c
 CMakeFiles/make-build-debug/ft_printf.dir/smth_to_a.c.o
  /Users/andrei/hack/school42/ft_printf/ft_printf.h
  /Users/andrei/hack/school42/ft_printf/libft/libft.h
