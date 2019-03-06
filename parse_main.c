@@ -35,6 +35,7 @@ size_t      parse_format(const char *format, t_print *node)
 char *parse_csp(va_list ap, t_print *node)
 {
     char *tmp;
+    char *str_s;
 
     if (node->next_arg == 1)
         va_arg(ap, int);
@@ -46,9 +47,15 @@ char *parse_csp(va_list ap, t_print *node)
     if (node->type == 'c')
         tmp = parse_char((char)va_arg(ap, int), node);
     else if (node->type == 's')
-        tmp = parse_str(va_arg(ap, char *), node);
+    {
+        str_s = va_arg(ap, char *);
+        if (!str_s)
+            tmp = parse_str(ft_strdup("(null)"), node);
+        else
+            tmp = parse_str(ft_strdup(str_s), node);
+    }
     else
-    tmp = parse_address(va_arg(ap, long), node);
+        tmp = parse_address(va_arg(ap, long), node);
     return (tmp);
 }
 
@@ -78,7 +85,7 @@ char *parse_dioux_size(va_list ap, t_print *node)
     else if (node->size[1] == 'h')
         tmp = manage_unsigned_char((unsigned char)va_arg(ap, int), node);
     else
-    tmp = manage_unsigned_short((unsigned short)va_arg(ap, int), node);
+        tmp = manage_unsigned_short((unsigned short)va_arg(ap, int), node);
     return (tmp);
 }
 

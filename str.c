@@ -16,8 +16,7 @@
 void ft_strput_width(char *str, t_print * node)
 {
 
-    if (node->flag[4] == '0' && node->flag[0] != '-' && node->precision < 0
-                                                        && (node->type != 'c' && node->type != 's'))
+    if (check_flag0(node) && (node->type != 'c' && node->type != 's'))
     {
         ft_memset(str, '0', node->width);
     }
@@ -29,9 +28,9 @@ void ft_strput_width(char *str, t_print * node)
         ft_memset(str, ' ', node->width);
 }
 
-void ft_strlcat_all(char *restrict dst, const char *restrict src, size_t size)
+void ft_strlcat_all(char *restrict dst, const char *restrict src, int size)
 {
-    size_t		i;
+    int		i;
 
     i = 0;
     while (i < size)
@@ -53,10 +52,10 @@ char	*ft_strjoin_all(char *arg, t_print *node)
     str = ft_memalloc(node->common_len + 1);
     if (!str)
         return (NULL);
-    len = ft_strlen(node->res);
+    len = (int)ft_strlen(node->res);
     ft_strlcat_all(str, node->res, len);
-    ft_strlcat_all(&str[len], arg, node->common_len - len);
-//    ft_strdel(&arg);
+    ft_strlcat_all(&str[len], arg, (int)node->common_len - len);
     ft_strdel(&node->res);
     return (str);
 }
+

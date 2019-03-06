@@ -34,22 +34,21 @@ char    *parse_str(char *arg, t_print *node)
     char    *str;
     char    *ptr_arg;
 
-    if (!arg)
-        arg = ft_strdup("(null)");
     node->len = ft_strlen(arg);
     if (node->precision >= 0 && node->type == 's' && node->len > node->precision )
     {
         ptr_arg = ft_strnew(node->precision);
         ptr_arg = ft_strncpy(ptr_arg, arg, node->precision);
+        ft_strdel(&arg);
     }
     else
         ptr_arg = arg;
     node->len = ft_strlen(ptr_arg);
     node->width = node->len > node->width ? node->len : node->width;
-    str = ft_strnew(node->width);
+    str = ft_strnew((size_t)node->width);
     ft_strput_width(str, node);
     ft_strcpy_from(str, ptr_arg, node->flag[0] == '-' ? 0 : node->width-node->len);
-//    ft_strdel(&arg);
+    ft_strdel(&arg);
     return (str);
 }
 
@@ -80,24 +79,12 @@ char    *parse_char(char arg, t_print *node)
 
 char *parse_address(long address, t_print *node)
 {
-    int len;
-    int count_long;
-    char *str_base;
-    char *str_prec;
-    char *res;
+    char *str_smthto;
 
     if (address == 0 && node->precision != 0)
-        str_base = ft_strdup("0");
+        str_smthto = ft_strdup("0");
     else
-        str_base = ft_base_hex(address);
-    count_long = (int)ft_strlen(str_base);
-    len = node->precision > count_long ? node->precision - count_long : 0;
-    str_prec = ft_strnew((size_t)len + 2);
-    oux_precision(str_prec, node, len + 2);
-    res = ft_strjoin(str_prec, str_base);
-    ft_strdel(&str_prec);
-    ft_strdel(&str_base);
+        str_smthto = ft_base_hex(address);
+    return (manage_uox(str_smthto, node));;
 
-
-    return (parse_str(res, node));
 }

@@ -21,7 +21,7 @@ char   *manage_di(char *str_smthto, t_print *node, char sign)
     len_str = ft_strlen(str_smthto);
     node->width = node->len > node->width ? node->len : node->width;
     str_width = ft_strnew(node->width);
-    set_width_and_sign(str_width, node, sign);
+    set_width_and_sign_ForDI(str_width, node, sign);
     padding_prec = di_precision(str_width, node, node->precision - len_str);
     ft_strcpy_from(str_width, str_smthto, node->flag[0] == '-' ? padding_prec : node->width-len_str);
     ft_strdel(&str_smthto);
@@ -30,28 +30,21 @@ char   *manage_di(char *str_smthto, t_print *node, char sign)
 
 char *manage_uox(char *arg, t_print *node)
 {
-    char *str_prec;
-    char *res;
-    int count;
+    char *str_width;
+    int padding_signs;
+    int padding_prec;
 
-    if (arg[0] == '0' && (node->precision == 0) && (node->type != 'o' || node->flag[3] != '#'))
-        return (parse_str(ft_strnew(node->width), node));
-    else if (arg[0] == '0')
-        return (arg);
-    count = (int)ft_strlen(arg);
-    node->len = node->precision > count ? node->precision - count : 0;
-    if (node->flag[3] == '#' && (node->type == 'x' || node->type == 'X'))
-        node->len += 2;
-    else if (node->flag[3] == '#' && node->type == 'o')
-        node->len += 1;
-    if (node->len == 0)
-        return (parse_str(arg, node));
-    str_prec = ft_strnew(node->len);
-    oux_precision(str_prec, node, node->len);
-    res = ft_strjoin(str_prec, arg);
-    ft_strdel(&str_prec);
+    count_width_oux(node, arg);
+    str_width = ft_strnew(node->width);
+    ft_strput_width(str_width, node);
+    padding_signs = 0;
+    if (check_uox(node, arg))
+        padding_signs = set_sign_For_pouxX(str_width, node);
+    node->len = (int)ft_strlen(arg);
+    padding_prec = poux_precision(str_width, node, padding_signs);
+    if (check_uox2(node, arg))
+        ft_strcpy_from(str_width, arg, (size_t)padding_prec);
     ft_strdel(&arg);
-    if (node->flag[4] == '0' && check_flag_0(node))
-        return (parse_str_oux(res, node));
-    return (parse_str(res, node));
+    return (str_width);
+
 }

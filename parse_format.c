@@ -65,7 +65,6 @@ char    *get_str_before_percent(const char *format, t_print *node)
     ft_strlcat_all(new_str, node->res, node->common_len);
     new_str = ft_strncat_percent(new_str, format, node);
     ft_strdel(&node->res);
-//    node->common_len += node->len;
     node->len = 0;
     return (new_str);
 }

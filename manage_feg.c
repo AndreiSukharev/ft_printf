@@ -29,7 +29,7 @@ char   *add_float(char *str_smthto, t_print *node)
     node->len = ft_strlen(str_smthto) + (sign != '0' && str_smthto[0] != '-' ? 1 : 0);
     node->width = node->len > node->width ? node->len : node->width;
     str_width = ft_strnew(node->width);
-    set_width_and_sign(str_width, node, sign);
+    set_width_and_sign_ForDI(str_width, node, sign);
     sign = sign == '0' ? 0 : 1;
     if (str_smthto[0] == '-')
     {

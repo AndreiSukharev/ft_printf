@@ -86,21 +86,21 @@ size_t   check_precision(const char *format, t_print *node)
         return (0);
     while (format[i] == '.')
     {
-        i++;
-        temp = i;
+        temp = ++i;
         if (format[i] == '*')
             node->precision = -2;
         while (format[i] >= '0' && format[i] <= '9')
             i++;
         if (temp != i)
         {
-            str = ft_strnew(i - temp);
-            str = ft_strncat(str, &format[temp], i - temp);
+            str = ft_strncat(ft_strnew(i - temp), &format[temp], i - temp);
             node->precision = ft_atoi(str);
             ft_strdel(&str);
         }
         if (format[i - 1] == '.' && format[i] != '*')
             node->precision = 0;
+        else if (format[i - 1] == '.' && format[i] == '*')
+            i++;
     }
     return (i);
 }

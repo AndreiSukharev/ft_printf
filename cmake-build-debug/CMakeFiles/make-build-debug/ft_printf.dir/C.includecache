@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/andrei/hack/school42/ft_printf/check_format.c
+ft_printf.h
+/Users/andrei/hack/school42/ft_printf/ft_printf.h
+
 /Users/andrei/hack/school42/ft_printf/ft_printf.h
 stdarg.h
 -
@@ -20,11 +24,5 @@ stdio.h
 stdlib.h
 -
 fcntl.h
--
-
-/Users/andrei/hack/school42/ft_printf/main.c
-ft_printf.h
-/Users/andrei/hack/school42/ft_printf/ft_printf.h
-limits.h
 -
 

@@ -53,7 +53,7 @@ void main_result(const char *format, va_list ap, t_print *node)
         node->common_len += ft_strlen(arg);
         if (arg)
             node->res = ft_strjoin_all(arg, node);
-//        ft_strdel(&arg);
+        ft_strdel(&arg);
         rewrite_tprint(node);
     }
 }
@@ -76,6 +76,7 @@ int     ft_printf(const char * restrict format, ...)
     {
         if (len)
             write(1, node->res, len);
+        ft_strdel(&node->res);
         del_tprint(&node);
         return ((int)len);
     }
