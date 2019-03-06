@@ -82,3 +82,21 @@ long long intToStr_float(long long x, char str[], int d)
     str[i] = '\0';
     return i;
 }
+
+void    add_exp(char *str, int leni, int sign)
+{
+    str[0] = 'e';
+    str[1] = sign < 0 ? '-' : '+';
+    if (leni < 10)
+    {
+        str[2] = '0';
+        str[3] = leni + '0';
+    }
+    else
+    {
+        str[3] = leni % 10 + '0';
+        str[2] = leni / 10 + '0';
+    }
+    str[4] = '\0';
+
+}

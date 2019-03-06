@@ -20,14 +20,8 @@ int		main(void)
     char *free;
     free = "sdf";
 
-    printf("%*.*d\n", 0, 3, 0);
-    ft_printf("%*.*d", 0, 3, 0);
-//    ft_printf("% Z%s", "test");
-//    ft_printf("%%%", "test");
-//    printf("{%-15Z}\n", 123);
-//    ft_printf("{%-15Z}", 123);
-//    printf("s: %s, p: %p, d:%d\n", "a string", &free, 42);
-//    ft_printf("s: %s, p: %p, d:%d\n", "a string", &free, 42);
+    printf("%e\n", .00);
+    ft_printf("%e\n", -.00);
 
 	return (1);
 
