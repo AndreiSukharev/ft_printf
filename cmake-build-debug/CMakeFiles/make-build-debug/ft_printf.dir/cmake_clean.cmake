@@ -15,9 +15,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/make-build-debug/ft_printf.dir/manage_size.c.o"
   "CMakeFiles/make-build-debug/ft_printf.dir/parse_main.c.o"
   "CMakeFiles/make-build-debug/ft_printf.dir/manage_feg.c.o"
-  "CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.o"
+  "CMakeFiles/make-build-debug/ft_printf.dir/libfeg.c.o"
   "CMakeFiles/make-build-debug/ft_printf.dir/temp.c.o"
   "CMakeFiles/make-build-debug/ft_printf.dir/str.c.o"
+  "CMakeFiles/make-build-debug/ft_printf.dir/bonus_flags_brk.c.o"
   "make-build-debug/ft_printf.pdb"
   "make-build-debug/ft_printf"
 )

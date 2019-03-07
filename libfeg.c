@@ -13,33 +13,25 @@
 #include "ft_printf.h"
 
 
-//long long float_after_point(long double dec, long i)
-//{
-//    int j;
-//    long long tmp;
-//
-//    j = 0;
-//    dec *= dec < 0 ? -1 : 1;
-//    tmp = (long long)dec;
-//    if (i < 7)
-//    {
-//        while (j++ <= 7) {
-//            if (tmp % 10 == 9) {
-//                break;
-//            }
-//            tmp /= 10;
-//        }
-//    }
-//    dec *= ft_pow(10, i + j);
-//    tmp = (long long)dec;
-//    while (j-- > 0)
-//    {
-//        tmp += (tmp % 10) > 0 ? 1 : 0;
-//        tmp /= 10;
-//    }
-//
-//    return ((long long)tmp);
-//}
+int check_flag_g(t_print *node, long i)
+{
+    node->precision = node->precision == -1 ? 6 : node->precision;
+    node->precision = node->precision == 0 ? 1 : node->precision;
+    if (node->len <= node->precision)
+    {
+        node->precision -= i != 0 ? node->len : 0;
+        return (1);
+    }
+    else
+    {
+        if (node->precision == 6)
+            node->precision = 5;
+        else
+            node->precision = node->precision != 0 ? node->precision - 1 : 0;
+        node->type = 'e';
+    }
+    return (0);
+}
 
 long long ft_pow(long long a, int b)
 {
@@ -47,25 +39,29 @@ long long ft_pow(long long a, int b)
 
     tmp = (int)a;
     while (--b)
-    {
         a *= tmp;
-    }
     return (a);
 }
 
 void reverse(char *str, int len)
 {
-    int i=0, j=len-1, temp;
-    while (i<j)
+    int i;
+    int j;
+    int temp;
+
+    i = 0;
+    j = len-1;
+    while (i < j)
     {
         temp = str[i];
         str[i] = str[j];
         str[j] = temp;
-        i++; j--;
+        i++;
+        j--;
     }
 }
 
-long long intToStr_float(long long x, char str[], t_print *node)
+long long str_to_float(long long x, char str[], t_print *node)
 {
     int i;
 
@@ -99,5 +95,26 @@ void    add_exp(char *str, int leni, int sign)
         str[2] = leni / 10 + '0';
     }
     str[4] = '\0';
+}
 
+long double prec_for_feg(long double dec, t_print * node)
+{
+    int i;
+    long long remain;
+    int counter;
+
+    if (node->precision == 0)
+        return (0);
+    dec *= dec < 0 ? -1 : 1;
+    counter += node->precision + 1;
+    dec *= ft_pow(10, counter);
+    i = 0;
+    counter -= node->precision;
+    while (i++ != counter)
+    {
+        remain = (long long)dec % 10;
+        dec /= 10;
+        dec += remain > 4 ? 1 : 0;
+    }
+    return (dec);
 }

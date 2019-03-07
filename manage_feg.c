@@ -46,20 +46,22 @@ char   *add_float(char *str_smthto, t_print *node)
 char *combine_floats(long i, long double dec, t_print *node)
 {
     char *int_part;
+    char *nul_str;
     char *dec_part;
     char *res;
 
-    int_part = ft_long_toa(i);
+    if (i == 0 && dec < 0)
+    {
+        nul_str = ft_long_toa(i);
+        int_part = ft_strjoin("-", nul_str);
+        ft_strdel(&nul_str);
+    }
+    else
+        int_part = ft_long_toa(i);
     node->precision = node->precision == -1 ? 6 : node->precision;
-    dec *= dec < 0 ? -1 : 1;
-    dec *= ft_pow(10, node->precision + 1);
-    dec += (long long)dec % 10 == 9 ? 1 : 0;
-    dec /= 10;
-    size_t  long_count = ft_count_longlong((long long)dec);
-    dec_part = ft_strnew(long_count + 1 + (size_t)(node->type == 'e' ? 2 + ABS(node->len) : 0));
-//    dec_part = ft_strnew(ft_count_longlong((long long)dec) + 1 + (node->type == 'e' ? 2 + ABS(node->len) : 0));
-    int k = 0;
-    i = intToStr_float((long long)dec, dec_part, node);
+    dec = prec_for_feg(dec, node);
+    dec_part = ft_strnew(ft_count_longlong((long long)dec) + 1 + (node->type == 'e' ? 2 + ABS(node->len) : 0));
+    i = str_to_float((long long)dec, dec_part, node);
     if (node->type == 'e')
         add_exp(&dec_part[i], ABS(node->len), node->len);
     res = ft_strjoin(int_part, dec_part);
@@ -89,26 +91,19 @@ char    *manage_double_f(long double f, t_print *node)
 {
     long i;
     long double dec;
+    int tmp;
 
     if (f == 0)
         return (long_double0(node));
     i = (long)f;
     dec = f - i;
+    if (node->precision == 0)
+    {
+        tmp = dec * 10;
+        if (ABS(tmp) > 4)
+            i = (dec < 0 ? i - 1 : i + 1);
+    }
     return (combine_floats(i, dec, node));
-//    int_part = ft_long_toa(i);
-//    if (node->precision == 0)
-//        return (add_float(int_part, node));
-//    node->precision = node->precision == -1 ? 6 : node->precision;
-//    dec *= dec < 0 ? -1 : 1;
-//    dec *= ft_pow(10, node->precision + 1);
-//    dec += (long long)dec % 10 == 9 ? 1 : 0;
-//    dec /= 10;
-//    dec_part = ft_strnew(ft_count_longlong((long long)dec) + 1);
-//    intToStr_float((long long)dec, dec_part, node->precision);
-//    res = ft_strjoin(int_part, dec_part);
-//    ft_strdel(&dec_part);
-//    ft_strdel(&int_part);
-//    return (add_float(res, node));
 }
 
 char *manage_double_exp(long double f, t_print *node)
@@ -116,6 +111,7 @@ char *manage_double_exp(long double f, t_print *node)
     long i;
     long double dec;
     long pow_i;
+    int tmp;
 
     if (f == 0)
         return (long_double0(node));
@@ -129,7 +125,12 @@ char *manage_double_exp(long double f, t_print *node)
         node->len *= -1;
         i = (long)f;
         dec = f - i;
-        i *= i < 0 ? -1 : 1;
+        if (node->precision == 0)
+        {
+            tmp = dec * 10;
+            if (ABS(tmp) > 4)
+                i = (dec < 0 ? i - 1 : i + 1);
+        }
     }
     else
     {
@@ -142,7 +143,9 @@ char *manage_double_exp(long double f, t_print *node)
             pow_i = ft_pow(10, node->len - 1);
             i /= pow_i;
             dec = (f - i * ft_pow(10, node->len - 1)) /ft_pow(10, node->len - 1);
-            i += node->precision == 0 && dec * 10 > 4 ? 1 : 0;
+            tmp = dec * 10;
+            if (ABS(tmp) > 4 && node->precision == 0)
+                i = (dec < 0 ? i - 1 : i + 1);
         }
         else
             dec = f - i;
@@ -154,53 +157,28 @@ char *manage_double_exp(long double f, t_print *node)
 
 char *manage_double_g(long double f, t_print *node)
 {
-    char *f_str;
-    char *e_str;
-    t_print *copy_node;
-    int len_f;
+    char *res;
+    long i;
+    int index;
 
-    len_f = 0;
-    copy_node = node;
-    f_str = manage_double_f(f, node);
-    copy_node->type = 'e';
-    e_str = manage_double_exp(f, copy_node);
-    while (f_str[len_f] && f_str[len_f] != '.')
+    if (f == 0)
+        return (long_double0(node));
+    i = (long)f;
+    index = 0;
+    node->len = ft_count_long(i) - (i < 0 ? 1 : 0);
+    if  (check_flag_g(node, i))
     {
-        len_f++;
+        res = manage_double_f(f, node);
+        while (res[index] && res[index] != '.')
+            index++;
+        while (res[index] && res[index] != '0')
+            index++;
+        res[index] = '\0';
     }
-    while (f_str[len_f] && f_str[len_f] != '0')
+    else
     {
-        len_f++;
+        res = manage_double_exp(f, node);
     }
-    f_str[len_f] = '\0';
-    return (copy_node->len < len_f ? e_str : f_str);
-
-
-
+    return (res);
 }
-
-//char    *manage_longfloat(long double f, t_print *node)
-//{
-//    int i;
-//    long double dec;
-//    char *int_part;
-//    char *dec_part;
-//    char *res;
-//
-//    i = (int)f;
-//    dec = f - (long double)i;
-//    int_part = ft_itoa(i);
-//    if (node->precision == 0)
-//        return (parse_str(int_part, node));
-//    i = node->precision == -1 ? 6 : node->precision;
-//    int_part[ft_strlen(int_part)] = '.';
-//    dec *= ft_pow(10, i);
-//    dec_part = ft_strnew(ft_count_longlong((long long)dec));
-//    intToStr_float((long long)dec, dec_part, i);
-//    res = ft_strjoin(int_part, dec_part);
-//    ft_strdel(&dec_part);
-//    ft_strdel(&int_part);
-//    return (parse_str(res, node));
-//}
-
 

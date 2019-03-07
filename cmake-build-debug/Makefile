@@ -123,6 +123,33 @@ make-build-debug/ft_printf/fast:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/build
 .PHONY : make-build-debug/ft_printf/fast
 
+bonus_flags_brk.o: bonus_flags_brk.c.o
+
+.PHONY : bonus_flags_brk.o
+
+# target to build an object file
+bonus_flags_brk.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/bonus_flags_brk.c.o
+.PHONY : bonus_flags_brk.c.o
+
+bonus_flags_brk.i: bonus_flags_brk.c.i
+
+.PHONY : bonus_flags_brk.i
+
+# target to preprocess a source file
+bonus_flags_brk.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/bonus_flags_brk.c.i
+.PHONY : bonus_flags_brk.c.i
+
+bonus_flags_brk.s: bonus_flags_brk.c.s
+
+.PHONY : bonus_flags_brk.s
+
+# target to generate assembly for a file
+bonus_flags_brk.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/bonus_flags_brk.c.s
+.PHONY : bonus_flags_brk.c.s
+
 check_format.o: check_format.c.o
 
 .PHONY : check_format.o
@@ -231,33 +258,6 @@ flags.c.s:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/flags.c.s
 .PHONY : flags.c.s
 
-for_lib.o: for_lib.c.o
-
-.PHONY : for_lib.o
-
-# target to build an object file
-for_lib.c.o:
-	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.o
-.PHONY : for_lib.c.o
-
-for_lib.i: for_lib.c.i
-
-.PHONY : for_lib.i
-
-# target to preprocess a source file
-for_lib.c.i:
-	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.i
-.PHONY : for_lib.c.i
-
-for_lib.s: for_lib.c.s
-
-.PHONY : for_lib.s
-
-# target to generate assembly for a file
-for_lib.c.s:
-	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/for_lib.c.s
-.PHONY : for_lib.c.s
-
 ft_printf.o: ft_printf.c.o
 
 .PHONY : ft_printf.o
@@ -284,6 +284,33 @@ ft_printf.s: ft_printf.c.s
 ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
+
+libfeg.o: libfeg.c.o
+
+.PHONY : libfeg.o
+
+# target to build an object file
+libfeg.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/libfeg.c.o
+.PHONY : libfeg.c.o
+
+libfeg.i: libfeg.c.i
+
+.PHONY : libfeg.i
+
+# target to preprocess a source file
+libfeg.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/libfeg.c.i
+.PHONY : libfeg.c.i
+
+libfeg.s: libfeg.c.s
+
+.PHONY : libfeg.s
+
+# target to generate assembly for a file
+libfeg.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/libfeg.c.s
+.PHONY : libfeg.c.s
 
 main.o: main.c.o
 
@@ -645,6 +672,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... make-build-debug/ft_printf"
+	@echo "... bonus_flags_brk.o"
+	@echo "... bonus_flags_brk.i"
+	@echo "... bonus_flags_brk.s"
 	@echo "... check_format.o"
 	@echo "... check_format.i"
 	@echo "... check_format.s"
@@ -657,12 +687,12 @@ help:
 	@echo "... flags.o"
 	@echo "... flags.i"
 	@echo "... flags.s"
-	@echo "... for_lib.o"
-	@echo "... for_lib.i"
-	@echo "... for_lib.s"
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
+	@echo "... libfeg.o"
+	@echo "... libfeg.i"
+	@echo "... libfeg.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

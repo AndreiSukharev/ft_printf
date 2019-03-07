@@ -36,6 +36,7 @@ char            *parse_csp(va_list ap, t_print *node);
 char            *parse_dioux_size(va_list ap, t_print *node);
 char            *parse_dioux(va_list ap, t_print *node);
 char            *parse_feg(va_list ap, t_print *node);
+char            *parse_brk(va_list ap, t_print *node);
 
 char	        *ft_strncat_percent(char *restrict s1, const char *restrict s2, t_print *node);
 size_t          find_percent(const char *str);
@@ -108,9 +109,10 @@ char            *manage_double_exp(long double f, t_print *node);
 char            *manage_double_g(long double f, t_print *node);
 
 long long       ft_pow(long long a, int b);
-long long       intToStr_float(long long x, char str[], t_print *node);
+long long       str_to_float(long long x, char str[], t_print *node);
 void            add_exp(char *str, int leni, int sign);
-//long long       float_after_point(long double dec, long i);
+long double     prec_for_feg(long double dec, t_print * node);
+int             check_flag_g(t_print *node, long i);
 
 size_t           check_another_percent(const char *format, t_print *node);
 int             check_uox(t_print *node, char *str);
@@ -123,6 +125,9 @@ int             check_flag0(t_print *node);
 void            ft_strput_width(char *str, t_print * node);
 void            ft_strlcat_all(char *restrict dst, const char *restrict src, int size);
 char	        *ft_strjoin_all(char *arg, t_print *node);
+
+char            *manage_binary(char *str, t_print *node);
+char            *manage_nonprint(char *str, t_print *node);
 
 
 #endif

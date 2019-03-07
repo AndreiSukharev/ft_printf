@@ -12,24 +12,24 @@
 
 #include "ft_printf.h"
 
-size_t      parse_format(const char *format, t_print *node)
+char *parse_brk(va_list ap, t_print *node)
 {
-    size_t  index;
+    char *tmp;
 
-    index = find_percent(format);
-    index++;
-    index += check_flag(&format[index], node);
-    index += check_width(&format[index], node);
-    index += format[index] == '+' || format[index] == '-'  || format[index] == ' ' || format[index] == '#'
-            || format[index] == '0' ? check_flag(&format[index], node) : 0;
-    index += check_precision(&format[index], node);
-    index += format[index] == '+' || format[index] == '-'  || format[index] == ' ' || format[index] == '#'
-             || format[index] == '0' ? check_flag(&format[index], node) : 0;
-    index += check_size(&format[index], node);
-    index += format[index] == '+' || format[index] == '-'  || format[index] == ' ' || format[index] == '#'
-             || format[index] == '0' ? check_flag(&format[index], node) : 0;
-    index += check_type(format[index], node);
-    return (index);
+    if (node->next_arg == 1)
+        va_arg(ap, int);
+    if (node->width == -2)
+        node->width = check_width_after_va(va_arg(ap, int), node);
+    if (node->precision == -2)
+        node->precision = va_arg(ap, int);
+
+    if (node->type == 'b')
+        tmp = manage_binary((char)va_arg(ap, int), node);
+//    else if (node->type == 'r')
+//        tmp = manage_nonprint((char)va_arg(ap, int), node);
+//    else
+//        tmp = manage_date((char)va_arg(ap, int), node);
+    return (tmp);
 }
 
 char *parse_csp(va_list ap, t_print *node)

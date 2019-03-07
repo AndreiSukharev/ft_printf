@@ -26,9 +26,31 @@ char *parse_what(va_list ap, t_print *node)
     else if ((node->size[0] != '0' || node->size[1] != '0') && (node->type == 'X' || node->type == 'x' ||
         node->type == 'o' || node->type == 'u' || node->type == 'd' || node->type == 'i'))
         arg = parse_dioux_size(ap, node);
+    else if (node->type == 'b' || node->type == 'r' || node->type == 'k')
+        arg = parse_brk(ap, node);
     else
         arg = NULL;
     return (arg);
+}
+
+size_t      parse_format(const char *format, t_print *node)
+{
+    size_t  index;
+
+    index = find_percent(format);
+    index++;
+    index += check_flag(&format[index], node);
+    index += check_width(&format[index], node);
+    index += format[index] == '+' || format[index] == '-'  || format[index] == ' ' || format[index] == '#'
+             || format[index] == '0' ? check_flag(&format[index], node) : 0;
+    index += check_precision(&format[index], node);
+    index += format[index] == '+' || format[index] == '-'  || format[index] == ' ' || format[index] == '#'
+             || format[index] == '0' ? check_flag(&format[index], node) : 0;
+    index += check_size(&format[index], node);
+    index += format[index] == '+' || format[index] == '-'  || format[index] == ' ' || format[index] == '#'
+             || format[index] == '0' ? check_flag(&format[index], node) : 0;
+    index += check_type(format[index], node);
+    return (index);
 }
 
 void main_result(const char *format, va_list ap, t_print *node)

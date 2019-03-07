@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   parse_addres.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbashiri <bbashiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 15:15:05 by bbashiri          #+#    #+#             */
-/*   Updated: 2019/02/22 17:27:24 by bbashiri         ###   ########.fr       */
+/*   Created: 2019/02/16 15:15:05 by bbashiri          #+#    #+#             */
+/*   Updated: 2019/02/22 17:26:53 by bbashiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <limits.h>
 
-//bonus 10, 52, 79
-
-int		main(void)
+char    *manage_binary(char *str, t_print *node)
 {
-    char *free;
-    free = "sdf";
+    return (NULL);
+}
 
-    double n = -0.688878;
-//    printf("%#.10f\n", n);
-//    ft_printf("%#.10f\n", n);
-    printf("%#e\n\n", n);
-    ft_printf("%#e\n\n", n);
-
-//    printf("%.1g\n", n);
-//    ft_printf("%.1g\n", n);
-
-	return (1);
-
+char    *manage_nonprint(char *str, t_print *node)
+{
+    return (NULL);
 }
