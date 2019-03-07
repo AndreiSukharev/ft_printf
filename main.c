@@ -19,15 +19,8 @@ int		main(void)
 {
     char *free;
     free = "sdf";
-
     double n = -0.688878;
-//    printf("%#.10f\n", n);
-//    ft_printf("%#.10f\n", n);
-    printf("%#e\n\n", n);
-    ft_printf("%#e\n\n", n);
-
-//    printf("%.1g\n", n);
-//    ft_printf("%.1g\n", n);
+    
 
 	return (1);
 
