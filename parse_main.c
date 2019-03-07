@@ -128,10 +128,10 @@ char        *parse_feg(va_list ap, t_print *node)
         tmp = manage_double_exp(va_arg(ap, long double), node);
     else if (node->type == 'e')
         tmp = manage_double_exp(va_arg(ap, double), node);
-//    else if (node->size[0] == 'L' && node->type == 'g')
-//        tmp = manage_g(va_arg(ap, long double), node);
-//    else if (node->type == 'g')
-//        tmp = manage_g(va_arg(ap, double), node);
+    else if (node->size[0] == 'L' && node->type == 'g')
+        tmp = manage_double_g(va_arg(ap, long double), node);
+    else if (node->type == 'g')
+        tmp = manage_double_g(va_arg(ap, double), node);
     else
         tmp = NULL;
     return (tmp);

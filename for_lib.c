@@ -65,7 +65,7 @@ void reverse(char *str, int len)
     }
 }
 
-long long intToStr_float(long long x, char str[], int d)
+long long intToStr_float(long long x, char str[], t_print *node)
 {
     int i;
 
@@ -75,8 +75,9 @@ long long intToStr_float(long long x, char str[], int d)
         str[i++] = (char)((x % 10) + '0');
         x = x/10;
     }
-    str[i++] = '.';
-    while (i < d)
+    if (node->flag[3] == '#' || node->precision > 0)
+        str[i++] = '.';
+    while (i < node->precision)
         str[i++] = '0';
     reverse(str, i);
     str[i] = '\0';

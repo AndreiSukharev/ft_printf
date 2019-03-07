@@ -22,9 +22,7 @@ stdlib.h
 fcntl.h
 -
 
-/Users/andrei/hack/school42/ft_printf/main.c
+/Users/andrei/hack/school42/ft_printf/manage_feg.c
 ft_printf.h
 /Users/andrei/hack/school42/ft_printf/ft_printf.h
-limits.h
--
 

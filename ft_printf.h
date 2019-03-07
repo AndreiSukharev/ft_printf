@@ -105,9 +105,10 @@ char            *manage_uox(char *arg, t_print *node);
 
 char            *manage_double_f(long double f, t_print *node);
 char            *manage_double_exp(long double f, t_print *node);
+char            *manage_double_g(long double f, t_print *node);
 
 long long       ft_pow(long long a, int b);
-long long       intToStr_float(long long x, char str[], int d);
+long long       intToStr_float(long long x, char str[], t_print *node);
 void            add_exp(char *str, int leni, int sign);
 //long long       float_after_point(long double dec, long i);
 

@@ -55,8 +55,11 @@ char *combine_floats(long i, long double dec, t_print *node)
     dec *= ft_pow(10, node->precision + 1);
     dec += (long long)dec % 10 == 9 ? 1 : 0;
     dec /= 10;
-    dec_part = ft_strnew(ft_count_longlong((long long)dec) + 1 + (node->type == 'e' ? 2 + ABS(node->len) : 0));
-    i = intToStr_float((long long)dec, dec_part, node->precision);
+    size_t  long_count = ft_count_longlong((long long)dec);
+    dec_part = ft_strnew(long_count + 1 + (size_t)(node->type == 'e' ? 2 + ABS(node->len) : 0));
+//    dec_part = ft_strnew(ft_count_longlong((long long)dec) + 1 + (node->type == 'e' ? 2 + ABS(node->len) : 0));
+    int k = 0;
+    i = intToStr_float((long long)dec, dec_part, node);
     if (node->type == 'e')
         add_exp(&dec_part[i], ABS(node->len), node->len);
     res = ft_strjoin(int_part, dec_part);
@@ -136,15 +139,44 @@ char *manage_double_exp(long double f, t_print *node)
             node->len -= 1;
         if (node->len > 1)
         {
-          pow_i = ft_pow(10, node->len - 1);
-          i /= pow_i;
-          dec = (f - i * pow_i) /pow_i;
+            pow_i = ft_pow(10, node->len - 1);
+            i /= pow_i;
+            dec = (f - i * ft_pow(10, node->len - 1)) /ft_pow(10, node->len - 1);
+            i += node->precision == 0 && dec * 10 > 4 ? 1 : 0;
         }
         else
             dec = f - i;
         node->len -= 1;
     }
     return (combine_floats(i, dec, node));
+}
+
+
+char *manage_double_g(long double f, t_print *node)
+{
+    char *f_str;
+    char *e_str;
+    t_print *copy_node;
+    int len_f;
+
+    len_f = 0;
+    copy_node = node;
+    f_str = manage_double_f(f, node);
+    copy_node->type = 'e';
+    e_str = manage_double_exp(f, copy_node);
+    while (f_str[len_f] && f_str[len_f] != '.')
+    {
+        len_f++;
+    }
+    while (f_str[len_f] && f_str[len_f] != '0')
+    {
+        len_f++;
+    }
+    f_str[len_f] = '\0';
+    return (copy_node->len < len_f ? e_str : f_str);
+
+
+
 }
 
 //char    *manage_longfloat(long double f, t_print *node)
@@ -169,6 +201,6 @@ char *manage_double_exp(long double f, t_print *node)
 //    ft_strdel(&dec_part);
 //    ft_strdel(&int_part);
 //    return (parse_str(res, node));
-}
+//}
 
 

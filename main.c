@@ -20,8 +20,14 @@ int		main(void)
     char *free;
     free = "sdf";
 
-    printf("%e\n", .00);
-    ft_printf("%e\n", -.00);
+    double n = 55000.56;
+//    printf("%#.f\n", n);
+//    printf("%#.e\n\n", n);
+////    ft_printf("%#.f\n", n);
+//    ft_printf("%#.e\n\n", n);
+
+    printf("%g\n", n);
+    ft_printf("%g\n", n);
 
 	return (1);
 
