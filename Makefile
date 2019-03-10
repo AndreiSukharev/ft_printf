@@ -1,14 +1,12 @@
-NAME = ft_printf
-FLAGS = -Wall -Wextra -Werror
-PRINTF_SRCS = *.c
-LIBFT_SRCS = libft/*.c
+NAME=libftprintf.a
+# FLAGS = -Wall -Wextra -Werror
+PRINTF_SRCS = *.c libft/*.c
 OBJS = *.o
 
 $(NAME):
-	gcc $(FLAGS) -c $(LIBFT_SRCS)
-	ar rc libft.a $(OBJS)
-	ranlib libft.a
-	#gcc $(FLAGS) $(PRINTF_SRCS) -L. -lft -o $(NAME)
+	gcc -c $(PRINTF_SRCS)
+	ar rc $(NAME) $(OBJS)
+	ranlib $(NAME)
 
 all: $(NAME)
 
@@ -17,6 +15,6 @@ clean:
 
 fclean: clean
 	/bin/rm -f $(NAME)
-	libft.a
+	#libft.a
 
 re: fclean all
