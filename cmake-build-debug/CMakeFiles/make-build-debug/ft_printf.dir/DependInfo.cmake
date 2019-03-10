@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/andrei/hack/school42/ft_printf/bonus_flags_brk.c" "/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles/make-build-debug/ft_printf.dir/bonus_flags_brk.c.o"
   "/Users/andrei/hack/school42/ft_printf/check_format.c" "/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles/make-build-debug/ft_printf.dir/check_format.c.o"
+  "/Users/andrei/hack/school42/ft_printf/colour.c" "/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles/make-build-debug/ft_printf.dir/colour.c.o"
   "/Users/andrei/hack/school42/ft_printf/count.c" "/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles/make-build-debug/ft_printf.dir/count.c.o"
   "/Users/andrei/hack/school42/ft_printf/count_unsigned.c" "/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles/make-build-debug/ft_printf.dir/count_unsigned.c.o"
   "/Users/andrei/hack/school42/ft_printf/flags.c" "/Users/andrei/hack/school42/ft_printf/cmake-build-debug/CMakeFiles/make-build-debug/ft_printf.dir/flags.c.o"

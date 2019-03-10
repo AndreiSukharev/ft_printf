@@ -28,7 +28,7 @@ void ft_strput_width(char *str, t_print * node)
         ft_memset(str, ' ', node->width);
 }
 
-void ft_strlcat_all(char *restrict dst, const char *restrict src, int size)
+int ft_strlcat_all(char *restrict dst, const char *restrict src, int size)
 {
     int		i;
 
@@ -39,6 +39,7 @@ void ft_strlcat_all(char *restrict dst, const char *restrict src, int size)
         i++;
     }
     dst[i] = '\0';
+    return (i);
 }
 
 

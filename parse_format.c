@@ -21,6 +21,14 @@ char	*ft_strncat_percent(char *restrict s1, const char *restrict s2, t_print *no
     len = node->common_len;
     while (s2[i] && i < node->len)
     {
+        if (s2[i] == '{')
+        {
+            if (check_colour("test", &s2[i], 'c'))
+            {
+                len +=check_colour(&s1[len], &s2[i], 'a');
+                i += check_colour("test", &s2[i], 'i');
+            }
+        }
         while (s2[i] == '%' && i < node->len)
         {
             s1[len++] = '%';
@@ -61,6 +69,7 @@ char    *get_str_before_percent(const char *format, t_print *node)
     char    *new_str;
 
     node->len = find_percent(format);
+//    node->len += check_colour( "test", format, 's');
     new_str = ft_strnew(node->len + node->common_len);
     ft_strlcat_all(new_str, node->res, node->common_len);
     new_str = ft_strncat_percent(new_str, format, node);

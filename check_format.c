@@ -20,25 +20,15 @@ size_t   check_flag(const char *format, t_print *node)
     while (format[i] == '-' || format[i] == '+' || format[i] == ' ' || format[i] == '#' || format[i] == '0')
     {
         if (format[i] == '-')
-        {
             node->flag[0] = '-';
-        }
         else if (format[i] == '+')
-        {
             node->flag[1] = '+';
-        }
         else if (format[i] == ' ')
-        {
             node->flag[2] =  node->flag[1] != '+' ? ' ' : '1';
-        }
         else if (format[i] == '#')
-        {
             node->flag[3] = '#';
-        }
         else if (format[i] == '0')
-        {
             node->flag[4] = '0';
-        }
         i++;
     }
     return (i);

@@ -58,9 +58,7 @@ char            *parse_address(long, t_print *node);
 char            *ft_strcpy_from(char *dst, const char *src, size_t from);
 
 char	        *ft_base_hex(long n);
-char	        *ft_base_xo(unsigned int n, t_print *node, int base);
-char	        *ft_base_xo_long(unsigned long n, t_print *node, int base);
-char	        *ft_base_xo_longlong(unsigned long long n, t_print *node, int base);
+char	        *ft_base_xo_longlong(unsigned long long n, char flag, int base);
 
 void            set_width_and_sign_ForDI(char * str, t_print *node, char sign);
 size_t            di_precision(char *str, t_print *node, int count_zero);
@@ -123,11 +121,12 @@ int             check_flag0(t_print *node);
 
 
 void            ft_strput_width(char *str, t_print * node);
-void            ft_strlcat_all(char *restrict dst, const char *restrict src, int size);
+int             ft_strlcat_all(char *restrict dst, const char *restrict src, int size);
 char	        *ft_strjoin_all(char *arg, t_print *node);
 
-char            *manage_binary(char *str, t_print *node);
+char            *manage_binary(long long value, t_print *node);
 char            *manage_nonprint(char *str, t_print *node);
+int             check_colour(char *str, char const *str2,  char sign);
 
 
 #endif

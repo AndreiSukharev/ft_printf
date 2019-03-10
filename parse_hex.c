@@ -34,7 +34,7 @@ char	*ft_base_hex(long n)
 	return (str);
 }
 
-char	*ft_base_xo(unsigned int n, t_print *node, int base)
+char	*ft_base_xo_longlong(unsigned long long n, char flag, int base)
 {
     int		    i;
     int			j;
@@ -42,59 +42,7 @@ char	*ft_base_xo(unsigned int n, t_print *node, int base)
     int 		hex[64];
     char 		dict_hex[17];
 
-    if (node->type == 'X')
-        ft_strcpy(dict_hex, "0123456789ABCDEF\0");
-    else
-        ft_strcpy(dict_hex, "0123456789abcdef\0");
-    i = 0;
-    j = 0;
-    while (n)
-    {
-        hex[i++] = n % base;
-        n /= base;
-    }
-    str = ft_strnew(i);
-    ft_memset(str, '0', 1);
-    while (--i >= 0)
-        str[j++] = dict_hex[hex[i]];
-    return (str);
-}
-
-char	*ft_base_xo_long(unsigned long n, t_print *node, int base)
-{
-    int		    i;
-    int			j;
-    char		*str;
-    int 		hex[64];
-    char 		dict_hex[17];
-
-    if (node->type == 'X')
-        ft_strcpy(dict_hex, "0123456789ABCDEF\0");
-    else
-        ft_strcpy(dict_hex, "0123456789abcdef\0");
-    i = 0;
-    j = 0;
-    while (n)
-    {
-        hex[i++] = n % base;
-        n /= base;
-    }
-    str = ft_strnew(i);
-    ft_memset(str, '0', 1);
-    while (--i >= 0)
-        str[j++] = dict_hex[hex[i]];
-    return (str);
-}
-
-char	*ft_base_xo_longlong(unsigned long long n, t_print *node, int base)
-{
-    int		    i;
-    int			j;
-    char		*str;
-    int 		hex[64];
-    char 		dict_hex[17];
-
-    if (node->type == 'X')
+    if (flag == 'X')
         ft_strcpy(dict_hex, "0123456789ABCDEF\0");
     else
         ft_strcpy(dict_hex, "0123456789abcdef\0");

@@ -9,6 +9,10 @@ CMakeFiles/make-build-debug/ft_printf.dir/check_format.c.o
  /Users/andrei/hack/school42/ft_printf/check_format.c
  /Users/andrei/hack/school42/ft_printf/ft_printf.h
  /Users/andrei/hack/school42/ft_printf/libft/libft.h
+CMakeFiles/make-build-debug/ft_printf.dir/colour.c.o
+ /Users/andrei/hack/school42/ft_printf/colour.c
+ /Users/andrei/hack/school42/ft_printf/ft_printf.h
+ /Users/andrei/hack/school42/ft_printf/libft/libft.h
 CMakeFiles/make-build-debug/ft_printf.dir/count.c.o
  /Users/andrei/hack/school42/ft_printf/count.c
  /Users/andrei/hack/school42/ft_printf/ft_printf.h

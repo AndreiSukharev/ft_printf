@@ -177,6 +177,33 @@ check_format.c.s:
 	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/check_format.c.s
 .PHONY : check_format.c.s
 
+colour.o: colour.c.o
+
+.PHONY : colour.o
+
+# target to build an object file
+colour.c.o:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/colour.c.o
+.PHONY : colour.c.o
+
+colour.i: colour.c.i
+
+.PHONY : colour.i
+
+# target to preprocess a source file
+colour.c.i:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/colour.c.i
+.PHONY : colour.c.i
+
+colour.s: colour.c.s
+
+.PHONY : colour.s
+
+# target to generate assembly for a file
+colour.c.s:
+	$(MAKE) -f CMakeFiles/make-build-debug/ft_printf.dir/build.make CMakeFiles/make-build-debug/ft_printf.dir/colour.c.s
+.PHONY : colour.c.s
+
 count.o: count.c.o
 
 .PHONY : count.o
@@ -678,6 +705,9 @@ help:
 	@echo "... check_format.o"
 	@echo "... check_format.i"
 	@echo "... check_format.s"
+	@echo "... colour.o"
+	@echo "... colour.i"
+	@echo "... colour.s"
 	@echo "... count.o"
 	@echo "... count.i"
 	@echo "... count.s"

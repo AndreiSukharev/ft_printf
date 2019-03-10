@@ -35,7 +35,7 @@ char    *parse_str(char *arg, t_print *node)
     char    *ptr_arg;
 
     node->len = ft_strlen(arg);
-    if (node->precision >= 0 && node->type == 's' && node->len > node->precision )
+    if (node->precision >= 0 && (node->type == 's' || node->type == 'r')  && node->len > node->precision )
     {
         ptr_arg = ft_strnew(node->precision);
         ptr_arg = ft_strncpy(ptr_arg, arg, node->precision);

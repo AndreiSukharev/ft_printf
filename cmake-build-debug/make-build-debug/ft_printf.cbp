@@ -86,6 +86,9 @@
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/check_format.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/ft_printf/colour.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/andrei/hack/school42/ft_printf/count.c">
 			<Option target="make-build-debug/ft_printf"/>
 		</Unit>

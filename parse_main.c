@@ -24,9 +24,9 @@ char *parse_brk(va_list ap, t_print *node)
         node->precision = va_arg(ap, int);
 
     if (node->type == 'b')
-        tmp = manage_binary((char)va_arg(ap, int), node);
-//    else if (node->type == 'r')
-//        tmp = manage_nonprint((char)va_arg(ap, int), node);
+        tmp = manage_binary(va_arg(ap, long long), node);
+    else if (node->type == 'r')
+        tmp = manage_nonprint(va_arg(ap, char *), node);
 //    else
 //        tmp = manage_date((char)va_arg(ap, int), node);
     return (tmp);

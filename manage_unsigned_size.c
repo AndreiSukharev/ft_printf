@@ -28,7 +28,7 @@ char    *manage_unsigned_longlong(unsigned long long arg, t_print *node)
         node->len = node->precision > count ? node->precision : count;
         return (manage_di(str_smthto, node, '0'));
     }
-    str_smthto = ft_base_xo_longlong(arg, node, node->type == 'o' ? 8 : 16);
+    str_smthto = ft_base_xo_longlong(arg, node->type, node->type == 'o' ? 8 : 16);
     return (manage_uox(str_smthto, node));
 }
 
@@ -48,7 +48,7 @@ char    *manage_unsigned_long(unsigned long arg, t_print *node)
         node->len = node->precision > count ? node->precision : count;
         return (manage_di(str_smthto, node, '0'));
     }
-    str_smthto = ft_base_xo_longlong(arg, node, node->type == 'o' ? 8 : 16);
+    str_smthto = ft_base_xo_longlong(arg, node->type, node->type == 'o' ? 8 : 16);
     return (manage_uox(str_smthto, node));
 }
 
@@ -68,7 +68,7 @@ char    *manage_unsigned_char(unsigned char arg, t_print *node)
         node->len = node->precision > count ? node->precision : count;
         return (manage_di(str_smthto, node, '0'));
     }
-    str_smthto = ft_base_xo_longlong(arg, node, node->type == 'o' ? 8 : 16);
+    str_smthto = ft_base_xo_longlong(arg, node->type, node->type == 'o' ? 8 : 16);
     return (manage_uox(str_smthto, node));
 }
 
@@ -88,7 +88,7 @@ char    *manage_unsigned_short(unsigned short arg, t_print *node)
         node->len = node->precision > count ? node->precision : count;
         return (manage_di(str_smthto, node, '0'));
     }
-    str_smthto = ft_base_xo_longlong(arg, node, node->type == 'o' ? 8 : 16);
+    str_smthto = ft_base_xo_longlong(arg, node->type, node->type == 'o' ? 8 : 16);
     return (manage_uox(str_smthto, node));
 }
 
@@ -108,7 +108,7 @@ char    *manage_unsigned_int(unsigned int arg, t_print *node)
         node->len = node->precision > count ? node->precision : count;
         return (manage_di(str_smthto, node, '0'));
     }
-    str_smthto = ft_base_xo_longlong(arg, node, node->type == 'o' ? 8 : 16);
+    str_smthto = ft_base_xo_longlong(arg, node->type, node->type == 'o' ? 8 : 16);
     return (manage_uox(str_smthto, node));
 }
 

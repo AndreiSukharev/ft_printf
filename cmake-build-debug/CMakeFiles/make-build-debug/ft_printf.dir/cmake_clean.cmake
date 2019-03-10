@@ -19,6 +19,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/make-build-debug/ft_printf.dir/temp.c.o"
   "CMakeFiles/make-build-debug/ft_printf.dir/str.c.o"
   "CMakeFiles/make-build-debug/ft_printf.dir/bonus_flags_brk.c.o"
+  "CMakeFiles/make-build-debug/ft_printf.dir/colour.c.o"
   "make-build-debug/ft_printf.pdb"
   "make-build-debug/ft_printf"
 )

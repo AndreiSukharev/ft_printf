@@ -9,6 +9,10 @@ CMakeFiles/make-build-debug/ft_printf.dir/check_format.c.o: ../check_format.c
 CMakeFiles/make-build-debug/ft_printf.dir/check_format.c.o: ../ft_printf.h
 CMakeFiles/make-build-debug/ft_printf.dir/check_format.c.o: ../libft/libft.h
 
+CMakeFiles/make-build-debug/ft_printf.dir/colour.c.o: ../colour.c
+CMakeFiles/make-build-debug/ft_printf.dir/colour.c.o: ../ft_printf.h
+CMakeFiles/make-build-debug/ft_printf.dir/colour.c.o: ../libft/libft.h
+
 CMakeFiles/make-build-debug/ft_printf.dir/count.c.o: ../count.c
 CMakeFiles/make-build-debug/ft_printf.dir/count.c.o: ../ft_printf.h
 CMakeFiles/make-build-debug/ft_printf.dir/count.c.o: ../libft/libft.h
