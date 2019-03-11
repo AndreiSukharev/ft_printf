@@ -161,14 +161,6 @@ char			*manage_double_exp(long double f, t_print *node);
 char			*manage_double_g(long double f, t_print *node);
 
 /*
-********************libfeg.c*********************************************
-*/
-int				check_flag_g(t_print *node, long i);
-long long		str_to_float(long long x, char str[], t_print *node);
-void			add_exp(char *str, int leni, int sign);
-long double		prec_for_feg(long double dec, t_print *node);
-
-/*
 *****************************str.c********************************************
 */
 void			ft_strput_width(char *str, t_print *node);
@@ -186,6 +178,15 @@ char			*manage_nonprint(char *str, t_print *node);
 *****************************colour.c******************************************
 */
 int				check_colour(char *str, char const *str2, char sign);
+
+/*
+********************libfeg.c*********************************************
+*/
+int				check_flag_g(t_print *node, long i);
+long long		str_to_float(long long x, char str[], t_print *node);
+void			add_exp(char *str, int leni, int sign);
+long double		prec_for_feg(long double dec, t_print *node);
+long long		ft_pow(long long a, int b);
 
 /*
 ********************libfeg2.c*********************************************

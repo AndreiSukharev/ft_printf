@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/andrei/hack/school42/prinf_from_school/ft_printf.h
+stdarg.h
+-
+libft/libft.h
+/Users/andrei/hack/school42/prinf_from_school/libft/libft.h
+
+/Users/andrei/hack/school42/prinf_from_school/libft/libft.h
+unistd.h
+-
+stdio.h
+-
+stdlib.h
+-
+fcntl.h
+-
+
+/Users/andrei/hack/school42/prinf_from_school/main.c
+ft_printf.h
+/Users/andrei/hack/school42/prinf_from_school/ft_printf.h
+limits.h
+-
+

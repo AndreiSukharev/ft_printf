@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_strequ_l(char const *s1, char *s2, int len)
+static int	ft_strequ_l(char const *s1, char *s2, int len)
 {
 	if (!s1 || !s2)
 		return (0);
@@ -27,7 +27,7 @@ int	ft_strequ_l(char const *s1, char *s2, int len)
 	return (0);
 }
 
-int	add_size_colour(char const *str, int finish)
+static int	add_size_colour(char const *str, int finish)
 {
 	if (ft_strequ_l(str, "{red}", finish))
 		return (1);
@@ -53,7 +53,7 @@ int	add_size_colour(char const *str, int finish)
 		return (0);
 }
 
-int	add_colour(char *str, char const *str2, int finish)
+static int	add_colour(char *str, char const *str2, int finish)
 {
 	int	i;
 

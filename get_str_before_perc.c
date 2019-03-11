@@ -15,11 +15,7 @@
 size_t	check_another_percent(const char *format, t_print *node)
 {
 	char	*str;
-	size_t	index_percent;
-	size_t	i;
-	char	*tmp;
 
-	i = 0;
 	if (format[0] == 0)
 		return (0);
 	str = parse_char(format[0], node);

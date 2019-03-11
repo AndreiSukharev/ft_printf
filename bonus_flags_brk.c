@@ -64,7 +64,7 @@ void	add_nonprint(char *str, char *res, char const *dict_nonprint)
 		else
 		{
 			res[i++] = '\\';
-			if (*str <= 13)
+			if (*str <= 13 && *str > 6)
 				res[i++] = dict_nonprint[*str];
 			else
 			{

@@ -89,18 +89,12 @@ char	*manage_double_f(long double f, t_print *node)
 
 char	*manage_double_exp(long double f, t_print *node)
 {
-	long		i;
-	long double	dec;
-	long		pow_i;
-	int			tmp;
-
 	if (f == 0)
 		return (long_double0(node));
 	if (f < 1 && f > -1)
 		return (manage_double_exp_less_1(f, node));
 	else
 		return (manage_double_exp_more_1(f, node));
-	return (combine_floats(i, dec, node));
 }
 
 char	*manage_double_g(long double f, t_print *node)

@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-char		*parse_what(va_list ap, t_print *node)
+static char		*parse_what(va_list ap, t_print *node)
 {
 	char	*arg;
 
@@ -35,7 +35,7 @@ char		*parse_what(va_list ap, t_print *node)
 	return (arg);
 }
 
-size_t	parse_format(const char *format, t_print *node)
+static size_t	parse_format(const char *format, t_print *node)
 {
 	size_t	index;
 
@@ -58,7 +58,7 @@ size_t	parse_format(const char *format, t_print *node)
 	return (index);
 }
 
-void		main_result(const char *format, va_list ap, t_print *node)
+static void		main_result(const char *format, va_list ap, t_print *node)
 {
 	char	*arg;
 	size_t	index;
@@ -83,7 +83,7 @@ void		main_result(const char *format, va_list ap, t_print *node)
 	}
 }
 
-int		ft_printf(const char *restrict format, ...)
+int				ft_printf(const char *restrict format, ...)
 {
 	va_list	ap;
 	t_print	*node;

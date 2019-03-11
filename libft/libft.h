@@ -106,6 +106,5 @@ typedef struct		s_get
 }					t_get;
 
 int					get_next_line(const int fd, char **line);
-long long			ft_pow(long long a, int b);
 
 #endif

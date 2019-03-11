@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="make-build-debug/ft_printf"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="make-build-debug/ft_printf">
+				<Option output="/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/make-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 make-build-debug/ft_printf"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="make-build-debug/ft_printf/fast">
+				<Option output="/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/make-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 make-build-debug/ft_printf/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/andrei/hack/school42/prinf_from_school/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/bonus_flags_brk.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/check_format.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/colour.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/count.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/count_unsigned.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/flags_dioux.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/ft_printf.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/ft_printf.h">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/get_str_before_perc.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/libfeg.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/libfeg2.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/main.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/manage_csp.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/manage_dioux.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/manage_feg.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/manage_size.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/manage_unsigned_size.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/parse_hex.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/parse_main.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/smth_to_a.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/smth_un_to_a.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/str.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/t_print.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/tools_format_flag.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/tools_oux_percent.c">
+			<Option target="make-build-debug/ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/andrei/hack/school42/prinf_from_school/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

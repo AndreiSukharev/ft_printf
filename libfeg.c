@@ -107,3 +107,13 @@ long double	prec_for_feg(long double dec, t_print *node)
 	}
 	return (dec);
 }
+
+long long	ft_pow(long long a, int b)
+{
+	int	tmp;
+
+	tmp = (int)a;
+	while (--b)
+		a *= tmp;
+	return (a);
+}
