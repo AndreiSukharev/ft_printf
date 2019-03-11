@@ -1,120 +1,109 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   libfeg.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbashiri <bbashiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 15:15:05 by bbashiri          #+#    #+#             */
-/*   Updated: 2019/02/22 17:27:30 by bbashiri         ###   ########.fr       */
+/*   Updated: 2019/03/11 15:05:57 by bbashiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-
-int check_flag_g(t_print *node, long i)
+int			check_flag_g(t_print *node, long i)
 {
-    node->precision = node->precision == -1 ? 6 : node->precision;
-    node->precision = node->precision == 0 ? 1 : node->precision;
-    if (node->len <= node->precision)
-    {
-        node->precision -= i != 0 ? node->len : 0;
-        return (1);
-    }
-    else
-    {
-        if (node->precision == 6)
-            node->precision = 5;
-        else
-            node->precision = node->precision != 0 ? node->precision - 1 : 0;
-        node->type = 'e';
-    }
-    return (0);
+	node->precision = node->precision == -1 ? 6 : node->precision;
+	node->precision = node->precision == 0 ? 1 : node->precision;
+	if (node->len <= node->precision)
+	{
+		node->precision -= i != 0 ? node->len : 0;
+		return (1);
+	}
+	else
+	{
+		if (node->precision == 6)
+			node->precision = 5;
+		else
+			node->precision = node->precision != 0 ? node->precision - 1 : 0;
+		node->type = 'e';
+	}
+	return (0);
 }
 
-long long ft_pow(long long a, int b)
+void		reverse(char *str, int len)
 {
-    int tmp;
+	int	i;
+	int	j;
+	int	temp;
 
-    tmp = (int)a;
-    while (--b)
-        a *= tmp;
-    return (a);
+	i = 0;
+	j = len - 1;
+	while (i < j)
+	{
+		temp = str[i];
+		str[i] = str[j];
+		str[j] = temp;
+		i++;
+		j--;
+	}
 }
 
-void reverse(char *str, int len)
+long long	str_to_float(long long x, char str[], t_print *node)
 {
-    int i;
-    int j;
-    int temp;
+	int	i;
 
-    i = 0;
-    j = len-1;
-    while (i < j)
-    {
-        temp = str[i];
-        str[i] = str[j];
-        str[j] = temp;
-        i++;
-        j--;
-    }
+	i = 0;
+	while (x)
+	{
+		str[i++] = (char)((x % 10) + '0');
+		x = x / 10;
+	}
+	if (node->flag[3] == '#' || node->precision > 0)
+		str[i++] = '.';
+	while (i < node->precision)
+		str[i++] = '0';
+	reverse(str, i);
+	str[i] = '\0';
+	return (i);
 }
 
-long long str_to_float(long long x, char str[], t_print *node)
+void		add_exp(char *str, int leni, int sign)
 {
-    int i;
-
-    i = 0;
-    while (x)
-    {
-        str[i++] = (char)((x % 10) + '0');
-        x = x/10;
-    }
-    if (node->flag[3] == '#' || node->precision > 0)
-        str[i++] = '.';
-    while (i < node->precision)
-        str[i++] = '0';
-    reverse(str, i);
-    str[i] = '\0';
-    return i;
+	str[0] = 'e';
+	str[1] = sign < 0 ? '-' : '+';
+	if (leni < 10)
+	{
+		str[2] = '0';
+		str[3] = leni + '0';
+	}
+	else
+	{
+		str[3] = leni % 10 + '0';
+		str[2] = leni / 10 + '0';
+	}
+	str[4] = '\0';
 }
 
-void    add_exp(char *str, int leni, int sign)
+long double	prec_for_feg(long double dec, t_print *node)
 {
-    str[0] = 'e';
-    str[1] = sign < 0 ? '-' : '+';
-    if (leni < 10)
-    {
-        str[2] = '0';
-        str[3] = leni + '0';
-    }
-    else
-    {
-        str[3] = leni % 10 + '0';
-        str[2] = leni / 10 + '0';
-    }
-    str[4] = '\0';
-}
+	int			i;
+	long long	remain;
+	int			counter;
 
-long double prec_for_feg(long double dec, t_print * node)
-{
-    int i;
-    long long remain;
-    int counter;
-
-    if (node->precision == 0)
-        return (0);
-    dec *= dec < 0 ? -1 : 1;
-    counter += node->precision + 1;
-    dec *= ft_pow(10, counter);
-    i = 0;
-    counter -= node->precision;
-    while (i++ != counter)
-    {
-        remain = (long long)dec % 10;
-        dec /= 10;
-        dec += remain > 4 ? 1 : 0;
-    }
-    return (dec);
+	if (node->precision == 0)
+		return (0);
+	dec *= dec < 0 ? -1 : 1;
+	counter += node->precision + 1;
+	dec *= ft_pow(10, counter);
+	i = 0;
+	counter -= node->precision;
+	while (i++ != counter)
+	{
+		remain = (long long)dec % 10;
+		dec /= 10;
+		dec += remain > 4 ? 1 : 0;
+	}
+	return (dec);
 }

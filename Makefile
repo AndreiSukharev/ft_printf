@@ -1,5 +1,4 @@
 NAME=libftprintf.a
-# FLAGS = -Wall -Wextra -Werror
 PRINTF_SRCS = *.c libft/*.c
 OBJS = *.o
 
@@ -15,6 +14,5 @@ clean:
 
 fclean: clean
 	/bin/rm -f $(NAME)
-	#libft.a
 
 re: fclean all

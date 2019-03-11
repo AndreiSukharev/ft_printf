@@ -6,7 +6,7 @@
 /*   By: bbashiri <bbashiri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 15:07:50 by bbashiri          #+#    #+#             */
-/*   Updated: 2018/12/21 17:53:50 by cmelara-         ###   ########.fr       */
+/*   Updated: 2019/03/11 15:06:56 by bbashiri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,5 +106,6 @@ typedef struct		s_get
 }					t_get;
 
 int					get_next_line(const int fd, char **line);
+long long			ft_pow(long long a, int b);
 
 #endif
